@@ -1,0 +1,29 @@
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+  color: $dark-900;
+  font-size: 14px;
+  line-height: 1.4;
+  @extend %opensans-400;
+}
+
+.main{
+  flex: 1 0 auto;
+}
