@@ -100,13 +100,64 @@
                 <span class="icons-num">12</span>
               </li>
               <li class="icons-item">
-                <a class="icons-link" href="#" style="background-image: url('images/icons/cart.svg');"></a>
+                <button class="icons-link icons-link__cart" type="button" style="background-image: url('images/icons/cart.svg');"></button>
                 <span class="icons-num">12</span>
               </li>
             </ul>
+            <div class="cart">
+              <div class="cart-top">
+                <h3 class="cart-title">Корзина</h3>
+                <button class="cart-clean">очистить корзину</button>
+                <button class="cart-btn" type="button">
+                  <span class="sr-only">Закрыть корзину</span>
+                </button>
+              </div>
+              <div class="cart-inner">
+                <div class="cart-item">
+                  <a class="cart-image" href="#" style="background-image: url(images/product-card/ananas.jpg);"></a>
+                  <div class="cart-info">
+                    <a class="cart-info__link" href="#">Ананас, 1 кг</a>
+                    <p class="cart-price">999<span class="cart-info__unit">₽</span></p>
+                  </div>
+                  <form class="cart-form" action="#">
+                    <label class="cart-form__label" for="minus"></label>
+                    <input class="cart-form__input minus" type="button" name="minus" value="-">
+                    <label class="cart-form__label" for="number"></label>
+                    <input class="cart-form__input cart-form__number" type="number" step="1" min="1" max="99" name="number" value="2">
+                    <label class="cart-form__label" for="plus"></label>
+                    <input class="cart-form__input plus" type="button" name="plus" value="+">
+                  </form>
+                  <p class="cart-price">1998<span class="cart-info__unit">₽</span></p>
+                  <button class="cart-btn cart-btn__small" type="button">
+                  </button>
+                </div>
+                <div class="cart-item">
+                  <a class="cart-image" href="#" style="background-image: url(images/product-card/dragon.jpg);"></a>
+                  <div class="cart-info">
+                    <a class="cart-info__link" href="#">Питахайя красная с белой мякотью, 1шт</a>
+                    <p class="cart-price">1019 <span class="cart-info__unit">₽</span> </p>
+                  </div>
+                  <form class="cart-form" action="#">
+                    <label class="cart-form__label" for="minus"></label>
+                    <input class="cart-form__input minus" type="button" name="minus" value="-">
+                    <label class="cart-form__label" for="number"></label>
+                    <input class="cart-form__input cart-form__number" type="number" step="1" min="1" max="99" name="number" value="2">
+                    <label class="cart-form__label" for="plus"></label>
+                    <input class="cart-form__input plus" type="button" name="plus" value="+">
+                  </form>
+                  <p class="cart-price">2038<span class="cart-info__unit">₽</span></p>
+                  <button class="cart-btn cart-btn__small" type="button">
+                  </button>
+                </div>
+              </div>
+              <div class="cart-bottom">
+                <h3 class="cart-title cart-title--bottom">Товаров на сумму</h3>
+                <span class="cart-price cart-bottom__price">2038<span class="cart-info__unit">₽</span></span>
+              </div>
+              <a class="link cart-link" href="#">Оформить заказ</a>
+            </div>
           </div>
         </div>
-      </div>
     </header>
 
 
@@ -114,37 +165,60 @@
     <main class="main">
       <section class="slider">
         <ul class="slider-inner">
-          <li class="slide" style="background-image: url('images/bg/1.jpg');">
-            <div class="container">
-              <div class="slide-item">
-                <h1 class="slide-title">СВЕЖАЧОК ВАМ в ХАТУ <span class="slide-title__span">Скидка -50%</span></h1>
-                <p class="slide-text">Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!</p>
-                <a class="link slide-link" href="#">Купить сейчас</a>
+          <li class="slide">
+            <div class="slide-items" style="background-image: url('images/bg/1.jpg');">
+              <div class="container">
+                <div class="slide-item">
+                  <h1 class="slide-title">СВЕЖАЧОК ВАМ в ХАТУ <span class="slide-title__span">Скидка -50%</span></h1>
+                  <div class="slide-text">
+                    <p> Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!</p>
+                  </div>
+                  <a class="link slide-link" href="#">Купить сейчас</a>
+                </div>
               </div>
             </div>
           </li>
-          <li class="slide" style="background-image: url('images/bg/2.jpg');">
-            <div class="container">
-              <div class="slide-item">
-                <h1 class="slide-title">НАКРУТИ СЕБЕ ТОМАТОВ<span class="slide-title__span">АКЦИЯ: 3 кг по цене 1</span></h1>
-                <p class="slide-text">Только с 12 по 15 июля скидка на домашние помидорчики</p>
-                <a class="link slide-link" href="#">Купить сейчас</a>
+          <li class="slide">
+            <div class="slide-items" style="background-image: url('images/bg/2.jpg');">
+              <div class="container">
+                <div class="slide-item">
+                  <h1 class="slide-title">НАКРУТИ СЕБЕ ТОМАТОВ<span class="slide-title__span">АКЦИЯ: 3 кг по цене 1</span></h1>
+                  <div class="slide-text">
+                    <p> Только с 12 по 15 июля скидка на домашние помидорчики</p>
+                  </div>
+                  <a class="link slide-link" href="#">Купить сейчас</a>
+                </div>
               </div>
             </div>
           </li>
-          <li class="slide" style="background-image: url('images/bg/3.jpg');">
-            <div class="container">
-              <div class="slide-item">
-                <h1 class="slide-title">Пусть остальные позеленеют от зависти<span class="slide-title__span">Распродажа зелени</span></h1>
-                <a class="link slide-link" href="#">Купить сейчас</a>
+          <li class="slide">
+            <div class="slide-items" style="background-image: url('images/bg/3.jpg');">
+              <div class="container">
+                <div class="slide-item">
+                  <h1 class="slide-title">Пусть остальные позеленеют от зависти<span class="slide-title__span">Распродажа зелени</span></h1>
+                  <a class="link slide-link" href="#">Купить сейчас</a>
+                </div>
               </div>
             </div>
           </li>
         </ul>
+        <button class="arrow arrow-prev" type="button">
+          <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+            <rect width="60" height="60" rx="6" fill="white" fill-opacity="0.8" />
+            <path d="M21.0382 31.0149L37.0515 45.6079C37.577 46.1307 38.4292 46.1307 38.9546 45.6079C39.4801 45.0851 39.4801 44.2369 38.9546 43.7141L23.9069 30L38.9533 16.2859C39.4788 15.7631 39.4788 14.9148 38.9533 14.3921C38.4278 13.8693 37.5756 13.8693 37.0502 14.3921L21.0369 28.9851C20.7568 29.2638 20.6367 29.6332 20.6554 29.9986C20.638 30.3654 20.7581 30.7348 21.0382 31.0149Z" fill="#505050" />
+          </svg>
+        </button>
+        <button class="arrow arrow-next" type="button">
+          <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+            <rect width="60" height="60" rx="6" fill="white" fill-opacity="0.8" />
+            <path d="M38.9641 28.9851L22.9508 14.3921C22.4254 13.8693 21.5731 13.8693 21.0477 14.3921C20.5222 14.9149 20.5222 15.7631 21.0477 16.2859L36.0954 30L21.049 43.7141C20.5235 44.2369 20.5235 45.0852 21.049 45.6079C21.5745 46.1307 22.4267 46.1307 22.9521 45.6079L38.9654 31.0149C39.2455 30.7362 39.3656 30.3668 39.3469 30.0014C39.3643 29.6346 39.2443 29.2652 38.9641 28.9851Z" fill="#505050" />
+          </svg>
+        </button>
       </section>
 
       <section class="advantages">
         <div class="container">
+          <h2 class="sr-only">Преимущества</h2>
           <div class="advantages-inner">
             <div class="advantages-item advantages-item--scooter">
               <h3 class="advantages-subtitle">Бесплатная доставка</h3>
@@ -161,6 +235,341 @@
           </div>
         </div>
       </section>
+
+      <section class="top">
+        <div class="container">
+          <h2 class="title">Топовые товары</h2>
+          <ul class="filters">
+            <li class="filters__item">
+              <button class="filters__btn" type="button" data-filter="all">Все товары</button>
+            </li>
+            <li class="filters__item">
+              <button class="filters__btn" type="button" data-filter=".category-fruit">Фрукты</button>
+            </li>
+            <li class="filters__item">
+              <button class="filters__btn" type="button" data-filter=".category-vegetables">ОВОЩИ</button>
+            </li>
+            <li class="filters__item">
+              <button class="filters__btn" type="button" data-filter=".category-drinks">Напитки</button>
+            </li>
+            <li class="filters__item">
+              <button class="filters__btn" type="button" data-filter=".category-grocery">БАКАЛЕЯ</button>
+            </li>
+          </ul>
+          <ul class="product-cards">
+            <li class="product-card mix category-fruit">
+              <article class="product-items">
+                <div class="product-card__badge">
+                  <a class="badge product-card__news" href="#">НОВИНКА</a>
+                  <a class="badge product-card__sale" href="#">-50%</a>
+                </div>
+                <div class="product-contect">
+                  <a class="product-card__img" href="#">
+                    <img src="images/product-card/ananas.jpg" alt="Ананас, 1кг" width="300" height="225">
+                  </a>
+                  <a class="product-card__link" href="#">
+                    <p class="product-card__text">Ананас, 1кг</p>
+                  </a>
+                  <div class="product-card__prices">
+                    <p class="product-card__price product-card__price--line">1999 ₽</p>
+                    <p class="product-card__price">999 ₽</p>
+                  </div>
+                  <button class="product-card__btn product-card__btn-heart" type="button">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none">
+                      <path d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1282 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8718 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0218 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0412 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z" fill="#C1C1C1" />
+                    </svg>
+                  </button>
+                  <button class="product-card__btn product-card__btn-cart" type="button">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <rect x="1.52588e-05" width="32" height="32" rx="3" fill="#63A60E" />
+                      <path d="M23.8989 10.0194C23.8113 9.9099 23.6787 9.84619 23.5385 9.84619H11.2548L10.9113 8.35775C10.8629 8.14834 10.6765 8 10.4615 8H8.46155C8.20667 8 8.00002 8.20666 8.00002 8.46156C8.00002 8.71647 8.20667 8.92309 8.46155 8.92309H10.0944L12.426 19.0269C12.4743 19.2363 12.6608 19.3846 12.8757 19.3846H22.1231C22.378 19.3846 22.5846 19.178 22.5846 18.9231C22.5846 18.6682 22.3779 18.4616 22.1231 18.4616H13.2429L12.8879 16.9231H22.1539C22.3698 16.9231 22.5568 16.7735 22.6042 16.5629L23.9888 10.409C24.0195 10.2722 23.9865 10.1289 23.8989 10.0194ZM21.7846 16H12.6749L11.4678 10.7692H22.9615L21.7846 16Z" fill="white" />
+                      <path d="M14.7692 20C13.8361 20 13.0769 20.7591 13.0769 21.6923C13.0769 22.6254 13.8361 23.3846 14.7692 23.3846C15.7024 23.3846 16.4615 22.6254 16.4615 21.6923C16.4615 20.7591 15.7024 20 14.7692 20ZM14.7692 22.4615C14.3451 22.4615 14 22.1164 14 21.6923C14 21.2681 14.3451 20.9231 14.7692 20.9231C15.1934 20.9231 15.5384 21.2681 15.5384 21.6923C15.5384 22.1164 15.1934 22.4615 14.7692 22.4615Z" fill="white" />
+                      <path d="M20.3077 20C19.3745 20 18.6154 20.7591 18.6154 21.6923C18.6154 22.6254 19.3745 23.3846 20.3077 23.3846C21.2408 23.3846 22 22.6254 22 21.6923C22 20.7591 21.2408 20 20.3077 20ZM20.3077 22.4615C19.8835 22.4615 19.5384 22.1165 19.5384 21.6923C19.5384 21.2682 19.8835 20.9231 20.3077 20.9231C20.7318 20.9231 21.0769 21.2682 21.0769 21.6923C21.0769 22.1165 20.7318 22.4615 20.3077 22.4615Z" fill="white" />
+                    </svg>
+                  </button>
+                </div>
+                <form class="cart-form product-form" action="#">
+                  <label class="cart-form__label product-form__label" for="minus"></label>
+                  <input class="cart-form__input minus product-form__input--minus" type="button" name="minus" value="-">
+                  <label class="cart-form__label product-form__label" for="number"></label>
+                  <input class="cart-form__input cart-form__number product-form__input" type="number" step="1" min="1" max="99" name="number" value="1">
+                  <label class="cart-form__label product-form__label" for="plus"></label>
+                  <input class="cart-form__input plus product-form__input--plus" type="button" name="plus" value="+">
+                </form>
+              </article>
+            </li>
+            <li class="product-card mix category-fruit">
+              <article class="product-items">
+                <div class="product-contect">
+                  <a class="product-card__img" href="#">
+                    <img src="images/product-card/lemon.jpg" alt="Лимон, 1кг" width="300" height="225">
+                  </a>
+                  <a class="product-card__link" href="#">
+                    <p class="product-card__text">Лимон, 1кг</p>
+                  </a>
+                  <div class="product-card__prices">
+                    <p class="product-card__price">199 ₽</p>
+                  </div>
+                  <button class="product-card__btn product-card__btn-heart" type="button">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none">
+                      <path d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1282 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8718 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0218 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0412 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z" fill="#C1C1C1" />
+                    </svg>
+                  </button>
+                  <button class="product-card__btn product-card__btn-cart" type="button">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <rect x="1.52588e-05" width="32" height="32" rx="3" fill="#63A60E" />
+                      <path d="M23.8989 10.0194C23.8113 9.9099 23.6787 9.84619 23.5385 9.84619H11.2548L10.9113 8.35775C10.8629 8.14834 10.6765 8 10.4615 8H8.46155C8.20667 8 8.00002 8.20666 8.00002 8.46156C8.00002 8.71647 8.20667 8.92309 8.46155 8.92309H10.0944L12.426 19.0269C12.4743 19.2363 12.6608 19.3846 12.8757 19.3846H22.1231C22.378 19.3846 22.5846 19.178 22.5846 18.9231C22.5846 18.6682 22.3779 18.4616 22.1231 18.4616H13.2429L12.8879 16.9231H22.1539C22.3698 16.9231 22.5568 16.7735 22.6042 16.5629L23.9888 10.409C24.0195 10.2722 23.9865 10.1289 23.8989 10.0194ZM21.7846 16H12.6749L11.4678 10.7692H22.9615L21.7846 16Z" fill="white" />
+                      <path d="M14.7692 20C13.8361 20 13.0769 20.7591 13.0769 21.6923C13.0769 22.6254 13.8361 23.3846 14.7692 23.3846C15.7024 23.3846 16.4615 22.6254 16.4615 21.6923C16.4615 20.7591 15.7024 20 14.7692 20ZM14.7692 22.4615C14.3451 22.4615 14 22.1164 14 21.6923C14 21.2681 14.3451 20.9231 14.7692 20.9231C15.1934 20.9231 15.5384 21.2681 15.5384 21.6923C15.5384 22.1164 15.1934 22.4615 14.7692 22.4615Z" fill="white" />
+                      <path d="M20.3077 20C19.3745 20 18.6154 20.7591 18.6154 21.6923C18.6154 22.6254 19.3745 23.3846 20.3077 23.3846C21.2408 23.3846 22 22.6254 22 21.6923C22 20.7591 21.2408 20 20.3077 20ZM20.3077 22.4615C19.8835 22.4615 19.5384 22.1165 19.5384 21.6923C19.5384 21.2682 19.8835 20.9231 20.3077 20.9231C20.7318 20.9231 21.0769 21.2682 21.0769 21.6923C21.0769 22.1165 20.7318 22.4615 20.3077 22.4615Z" fill="white" />
+                    </svg>
+                  </button>
+                </div>
+                <form class="cart-form product-form" action="#">
+                  <label class="cart-form__label product-form__label" for="minus"></label>
+                  <input class="cart-form__input minus product-form__input--minus" type="button" name="minus" value="-">
+                  <label class="cart-form__label product-form__label" for="number"></label>
+                  <input class="cart-form__input cart-form__number product-form__input" type="number" step="1" min="1" max="99" name="number" value="1">
+                  <label class="cart-form__label product-form__label" for="plus"></label>
+                  <input class="cart-form__input plus product-form__input--plus" type="button" name="plus" value="+">
+                </form>
+              </article>
+            </li>
+            <li class="product-card mix category-fruit">
+              <article class="product-items">
+                <div class="product-card__badge">
+                  <a class="badge product-card__hit" href="#">ХИТ</a>
+                </div>
+                <div class="product-contect">
+                  <a class="product-card__img" href="#">
+                    <img src="images/product-card/dragon.jpg" alt="Питахайя красная с белой мякотью, 1шт" width="300" height="225">
+                  </a>
+                  <a class="product-card__link" href="#">
+                    <p class="product-card__text">Питахайя красная с белой мякотью, 1шт</p>
+                  </a>
+                  <div class="product-cart__prices">
+                    <p class="product-card__price">1019 ₽</p>
+                  </div>
+                  <button class="product-card__btn product-card__btn-heart" type="button">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none">
+                      <path d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1282 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8718 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0218 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0412 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z" fill="#C1C1C1" />
+                    </svg>
+                  </button>
+                  <button class="product-card__btn product-card__btn-cart" type="button">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <rect x="1.52588e-05" width="32" height="32" rx="3" fill="#63A60E" />
+                      <path d="M23.8989 10.0194C23.8113 9.9099 23.6787 9.84619 23.5385 9.84619H11.2548L10.9113 8.35775C10.8629 8.14834 10.6765 8 10.4615 8H8.46155C8.20667 8 8.00002 8.20666 8.00002 8.46156C8.00002 8.71647 8.20667 8.92309 8.46155 8.92309H10.0944L12.426 19.0269C12.4743 19.2363 12.6608 19.3846 12.8757 19.3846H22.1231C22.378 19.3846 22.5846 19.178 22.5846 18.9231C22.5846 18.6682 22.3779 18.4616 22.1231 18.4616H13.2429L12.8879 16.9231H22.1539C22.3698 16.9231 22.5568 16.7735 22.6042 16.5629L23.9888 10.409C24.0195 10.2722 23.9865 10.1289 23.8989 10.0194ZM21.7846 16H12.6749L11.4678 10.7692H22.9615L21.7846 16Z" fill="white" />
+                      <path d="M14.7692 20C13.8361 20 13.0769 20.7591 13.0769 21.6923C13.0769 22.6254 13.8361 23.3846 14.7692 23.3846C15.7024 23.3846 16.4615 22.6254 16.4615 21.6923C16.4615 20.7591 15.7024 20 14.7692 20ZM14.7692 22.4615C14.3451 22.4615 14 22.1164 14 21.6923C14 21.2681 14.3451 20.9231 14.7692 20.9231C15.1934 20.9231 15.5384 21.2681 15.5384 21.6923C15.5384 22.1164 15.1934 22.4615 14.7692 22.4615Z" fill="white" />
+                      <path d="M20.3077 20C19.3745 20 18.6154 20.7591 18.6154 21.6923C18.6154 22.6254 19.3745 23.3846 20.3077 23.3846C21.2408 23.3846 22 22.6254 22 21.6923C22 20.7591 21.2408 20 20.3077 20ZM20.3077 22.4615C19.8835 22.4615 19.5384 22.1165 19.5384 21.6923C19.5384 21.2682 19.8835 20.9231 20.3077 20.9231C20.7318 20.9231 21.0769 21.2682 21.0769 21.6923C21.0769 22.1165 20.7318 22.4615 20.3077 22.4615Z" fill="white" />
+                    </svg>
+                  </button>
+                </div>
+                <form class="cart-form product-form" action="#">
+                  <label class="cart-form__label product-form__label" for="minus"></label>
+                  <input class="cart-form__input minus product-form__input--minus" type="button" name="minus" value="-">
+                  <label class="cart-form__label product-form__label" for="number"></label>
+                  <input class="cart-form__input cart-form__number product-form__input" type="number" step="1" min="1" max="99" name="number" value="1">
+                  <label class="cart-form__label product-form__label" for="plus"></label>
+                  <input class="cart-form__input plus product-form__input--plus" type="button" name="plus" value="+">
+                </form>
+              </article>
+            </li>
+            <li class="product-card mix category-grocery">
+              <article class="product-items">
+                <div class="product-contect">
+                  <a class="product-card__img" href="#">
+                    <img src="images/product-card/ketchup.jpg" alt="Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт" width="300" height="225">
+                  </a>
+                  <a class="product-card__link" href="#">
+                    <p class="product-card__text">Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт</p>
+                  </a>
+                  <div class="product-card__prices">
+                    <p class="product-card__price">600 ₽</p>
+                  </div>
+                  <button class="product-card__btn product-card__btn-heart" type="button">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none">
+                      <path d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1282 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8718 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0218 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0412 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z" fill="#C1C1C1" />
+                    </svg>
+                  </button>
+                  <button class="product-card__btn product-card__btn-cart" type="button">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <rect x="1.52588e-05" width="32" height="32" rx="3" fill="#63A60E" />
+                      <path d="M23.8989 10.0194C23.8113 9.9099 23.6787 9.84619 23.5385 9.84619H11.2548L10.9113 8.35775C10.8629 8.14834 10.6765 8 10.4615 8H8.46155C8.20667 8 8.00002 8.20666 8.00002 8.46156C8.00002 8.71647 8.20667 8.92309 8.46155 8.92309H10.0944L12.426 19.0269C12.4743 19.2363 12.6608 19.3846 12.8757 19.3846H22.1231C22.378 19.3846 22.5846 19.178 22.5846 18.9231C22.5846 18.6682 22.3779 18.4616 22.1231 18.4616H13.2429L12.8879 16.9231H22.1539C22.3698 16.9231 22.5568 16.7735 22.6042 16.5629L23.9888 10.409C24.0195 10.2722 23.9865 10.1289 23.8989 10.0194ZM21.7846 16H12.6749L11.4678 10.7692H22.9615L21.7846 16Z" fill="white" />
+                      <path d="M14.7692 20C13.8361 20 13.0769 20.7591 13.0769 21.6923C13.0769 22.6254 13.8361 23.3846 14.7692 23.3846C15.7024 23.3846 16.4615 22.6254 16.4615 21.6923C16.4615 20.7591 15.7024 20 14.7692 20ZM14.7692 22.4615C14.3451 22.4615 14 22.1164 14 21.6923C14 21.2681 14.3451 20.9231 14.7692 20.9231C15.1934 20.9231 15.5384 21.2681 15.5384 21.6923C15.5384 22.1164 15.1934 22.4615 14.7692 22.4615Z" fill="white" />
+                      <path d="M20.3077 20C19.3745 20 18.6154 20.7591 18.6154 21.6923C18.6154 22.6254 19.3745 23.3846 20.3077 23.3846C21.2408 23.3846 22 22.6254 22 21.6923C22 20.7591 21.2408 20 20.3077 20ZM20.3077 22.4615C19.8835 22.4615 19.5384 22.1165 19.5384 21.6923C19.5384 21.2682 19.8835 20.9231 20.3077 20.9231C20.7318 20.9231 21.0769 21.2682 21.0769 21.6923C21.0769 22.1165 20.7318 22.4615 20.3077 22.4615Z" fill="white" />
+                    </svg>
+                  </button>
+                </div>
+                <form class="cart-form product-form" action="#">
+                  <label class="cart-form__label product-form__label" for="minus"></label>
+                  <input class="cart-form__input minus product-form__input--minus" type="button" name="minus" value="-">
+                  <label class="cart-form__label product-form__label" for="number"></label>
+                  <input class="cart-form__input cart-form__number product-form__input" type="number" step="1" min="1" max="99" name="number" value="1">
+                  <label class="cart-form__label product-form__label" for="plus"></label>
+                  <input class="cart-form__input plus product-form__input--plus" type="button" name="plus" value="+">
+                </form>
+              </article>
+            </li>
+            <li class="product-card mix category-vegetables">
+              <article class="product-items">
+                <div class="product-card__badge">
+                  <a class="badge product-card__hit" href="#">ХИТ</a>
+                </div>
+                <div class="product-contect">
+                  <a class="product-card__img" href="#">
+                    <img src="images/product-card/carrot.jpg" alt="Морковь молодая с бабушкиной грядки, 1кг" width="300" height="225">
+                  </a>
+                  <a class="product-card__link" href="#">
+                    <p class="product-card__text">Морковь молодая с бабушкиной грядки, 1кг</p>
+                  </a>
+                  <div class="product-card__prices">
+                    <p class="product-card__price">49 ₽</p>
+                  </div>
+                  <button class="product-card__btn product-card__btn-heart" type="button">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none">
+                      <path d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1282 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8718 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0218 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0412 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z" fill="#C1C1C1" />
+                    </svg>
+                  </button>
+                  <button class="product-card__btn product-card__btn-cart" type="button">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <rect x="1.52588e-05" width="32" height="32" rx="3" fill="#63A60E" />
+                      <path d="M23.8989 10.0194C23.8113 9.9099 23.6787 9.84619 23.5385 9.84619H11.2548L10.9113 8.35775C10.8629 8.14834 10.6765 8 10.4615 8H8.46155C8.20667 8 8.00002 8.20666 8.00002 8.46156C8.00002 8.71647 8.20667 8.92309 8.46155 8.92309H10.0944L12.426 19.0269C12.4743 19.2363 12.6608 19.3846 12.8757 19.3846H22.1231C22.378 19.3846 22.5846 19.178 22.5846 18.9231C22.5846 18.6682 22.3779 18.4616 22.1231 18.4616H13.2429L12.8879 16.9231H22.1539C22.3698 16.9231 22.5568 16.7735 22.6042 16.5629L23.9888 10.409C24.0195 10.2722 23.9865 10.1289 23.8989 10.0194ZM21.7846 16H12.6749L11.4678 10.7692H22.9615L21.7846 16Z" fill="white" />
+                      <path d="M14.7692 20C13.8361 20 13.0769 20.7591 13.0769 21.6923C13.0769 22.6254 13.8361 23.3846 14.7692 23.3846C15.7024 23.3846 16.4615 22.6254 16.4615 21.6923C16.4615 20.7591 15.7024 20 14.7692 20ZM14.7692 22.4615C14.3451 22.4615 14 22.1164 14 21.6923C14 21.2681 14.3451 20.9231 14.7692 20.9231C15.1934 20.9231 15.5384 21.2681 15.5384 21.6923C15.5384 22.1164 15.1934 22.4615 14.7692 22.4615Z" fill="white" />
+                      <path d="M20.3077 20C19.3745 20 18.6154 20.7591 18.6154 21.6923C18.6154 22.6254 19.3745 23.3846 20.3077 23.3846C21.2408 23.3846 22 22.6254 22 21.6923C22 20.7591 21.2408 20 20.3077 20ZM20.3077 22.4615C19.8835 22.4615 19.5384 22.1165 19.5384 21.6923C19.5384 21.2682 19.8835 20.9231 20.3077 20.9231C20.7318 20.9231 21.0769 21.2682 21.0769 21.6923C21.0769 22.1165 20.7318 22.4615 20.3077 22.4615Z" fill="white" />
+                    </svg>
+                  </button>
+                </div>
+                <form class="cart-form product-form" action="#">
+                  <label class="cart-form__label product-form__label" for="minus"></label>
+                  <input class="cart-form__input minus product-form__input--minus" type="button" name="minus" value="-">
+                  <label class="cart-form__label product-form__label" for="number"></label>
+                  <input class="cart-form__input cart-form__number product-form__input" type="number" step="1" min="1" max="99" name="number" value="1">
+                  <label class="cart-form__label product-form__label" for="plus"></label>
+                  <input class="cart-form__input plus product-form__input--plus" type="button" name="plus" value="+">
+                </form>
+              </article>
+            </li>
+            <li class="product-card mix category-drinks">
+              <article class="product-items">
+                <div class="product-card__badge">
+                  <a class="badge product-card__sale" href="#">-30%</a>
+                </div>
+                <div class="product-contect">
+                  <a class="product-card__img" href="#">
+                    <img src="images/product-card/juice.jpg" alt="Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн..." width="300" height="225">
+                  </a>
+                  <a class="product-card__link" href="#">
+                    <p class="product-card__text">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...</p>
+                  </a>
+                  <div class="product-card__prices">
+                    <p class="product-card__price product-card__price--line">299 ₽</p>
+                    <p class="product-card__price">199 ₽</p>
+                  </div>
+                  <button class="product-card__btn product-card__btn-heart" type="button">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none">
+                      <path d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1282 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8718 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0218 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0412 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z" fill="#C1C1C1" />
+                    </svg>
+                  </button>
+                  <button class="product-card__btn product-card__btn-cart" type="button">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <rect x="1.52588e-05" width="32" height="32" rx="3" fill="#63A60E" />
+                      <path d="M23.8989 10.0194C23.8113 9.9099 23.6787 9.84619 23.5385 9.84619H11.2548L10.9113 8.35775C10.8629 8.14834 10.6765 8 10.4615 8H8.46155C8.20667 8 8.00002 8.20666 8.00002 8.46156C8.00002 8.71647 8.20667 8.92309 8.46155 8.92309H10.0944L12.426 19.0269C12.4743 19.2363 12.6608 19.3846 12.8757 19.3846H22.1231C22.378 19.3846 22.5846 19.178 22.5846 18.9231C22.5846 18.6682 22.3779 18.4616 22.1231 18.4616H13.2429L12.8879 16.9231H22.1539C22.3698 16.9231 22.5568 16.7735 22.6042 16.5629L23.9888 10.409C24.0195 10.2722 23.9865 10.1289 23.8989 10.0194ZM21.7846 16H12.6749L11.4678 10.7692H22.9615L21.7846 16Z" fill="white" />
+                      <path d="M14.7692 20C13.8361 20 13.0769 20.7591 13.0769 21.6923C13.0769 22.6254 13.8361 23.3846 14.7692 23.3846C15.7024 23.3846 16.4615 22.6254 16.4615 21.6923C16.4615 20.7591 15.7024 20 14.7692 20ZM14.7692 22.4615C14.3451 22.4615 14 22.1164 14 21.6923C14 21.2681 14.3451 20.9231 14.7692 20.9231C15.1934 20.9231 15.5384 21.2681 15.5384 21.6923C15.5384 22.1164 15.1934 22.4615 14.7692 22.4615Z" fill="white" />
+                      <path d="M20.3077 20C19.3745 20 18.6154 20.7591 18.6154 21.6923C18.6154 22.6254 19.3745 23.3846 20.3077 23.3846C21.2408 23.3846 22 22.6254 22 21.6923C22 20.7591 21.2408 20 20.3077 20ZM20.3077 22.4615C19.8835 22.4615 19.5384 22.1165 19.5384 21.6923C19.5384 21.2682 19.8835 20.9231 20.3077 20.9231C20.7318 20.9231 21.0769 21.2682 21.0769 21.6923C21.0769 22.1165 20.7318 22.4615 20.3077 22.4615Z" fill="white" />
+                    </svg>
+                  </button>
+                </div>
+                <form class="cart-form product-form" action="#">
+                  <label class="cart-form__label product-form__label" for="minus"></label>
+                  <input class="cart-form__input minus product-form__input--minus" type="button" name="minus" value="-">
+                  <label class="cart-form__label product-form__label" for="number"></label>
+                  <input class="cart-form__input cart-form__number product-form__input" type="number" step="1" min="1" max="99" name="number" value="1">
+                  <label class="cart-form__label product-form__label" for="plus"></label>
+                  <input class="cart-form__input plus product-form__input--plus" type="button" name="plus" value="+">
+                </form>
+              </article>
+            </li>
+            <li class="product-card mix category-drinks">
+              <article class="product-items">
+                <div class="product-card__badge">
+                  <a class="badge product-card__news" href="#">НОВИНКА</a>
+                </div>
+                <div class="product-contect">
+                  <a class="product-card__img" href="#">
+                    <img src="images/product-card/coffee.jpg" alt="Кофе с коноплей органический Caffé Salomoni 250г" width="300" height="225">
+                  </a>
+                  <a class="product-card__link" href="#">
+                    <p class="product-card__text">Кофе с коноплей органический Caffé Salomoni 250г</p>
+                  </a>
+                  <div class="product-card__prices">
+                    <p class="product-card__price">877 ₽</p>
+                  </div>
+                  <button class="product-card__btn product-card__btn-heart" type="button">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none">
+                      <path d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1282 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8718 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0218 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0412 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z" fill="#C1C1C1" />
+                    </svg>
+                  </button>
+                  <button class="product-card__btn product-card__btn-cart" type="button">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <rect x="1.52588e-05" width="32" height="32" rx="3" fill="#63A60E" />
+                      <path d="M23.8989 10.0194C23.8113 9.9099 23.6787 9.84619 23.5385 9.84619H11.2548L10.9113 8.35775C10.8629 8.14834 10.6765 8 10.4615 8H8.46155C8.20667 8 8.00002 8.20666 8.00002 8.46156C8.00002 8.71647 8.20667 8.92309 8.46155 8.92309H10.0944L12.426 19.0269C12.4743 19.2363 12.6608 19.3846 12.8757 19.3846H22.1231C22.378 19.3846 22.5846 19.178 22.5846 18.9231C22.5846 18.6682 22.3779 18.4616 22.1231 18.4616H13.2429L12.8879 16.9231H22.1539C22.3698 16.9231 22.5568 16.7735 22.6042 16.5629L23.9888 10.409C24.0195 10.2722 23.9865 10.1289 23.8989 10.0194ZM21.7846 16H12.6749L11.4678 10.7692H22.9615L21.7846 16Z" fill="white" />
+                      <path d="M14.7692 20C13.8361 20 13.0769 20.7591 13.0769 21.6923C13.0769 22.6254 13.8361 23.3846 14.7692 23.3846C15.7024 23.3846 16.4615 22.6254 16.4615 21.6923C16.4615 20.7591 15.7024 20 14.7692 20ZM14.7692 22.4615C14.3451 22.4615 14 22.1164 14 21.6923C14 21.2681 14.3451 20.9231 14.7692 20.9231C15.1934 20.9231 15.5384 21.2681 15.5384 21.6923C15.5384 22.1164 15.1934 22.4615 14.7692 22.4615Z" fill="white" />
+                      <path d="M20.3077 20C19.3745 20 18.6154 20.7591 18.6154 21.6923C18.6154 22.6254 19.3745 23.3846 20.3077 23.3846C21.2408 23.3846 22 22.6254 22 21.6923C22 20.7591 21.2408 20 20.3077 20ZM20.3077 22.4615C19.8835 22.4615 19.5384 22.1165 19.5384 21.6923C19.5384 21.2682 19.8835 20.9231 20.3077 20.9231C20.7318 20.9231 21.0769 21.2682 21.0769 21.6923C21.0769 22.1165 20.7318 22.4615 20.3077 22.4615Z" fill="white" />
+                    </svg>
+                  </button>
+                </div>
+                <form class="cart-form product-form" action="#">
+                  <label class="cart-form__label product-form__label" for="minus"></label>
+                  <input class="cart-form__input minus product-form__input--minus" type="button" name="minus" value="-">
+                  <label class="cart-form__label product-form__label" for="number"></label>
+                  <input class="cart-form__input cart-form__number product-form__input" type="number" step="1" min="1" max="99" name="number" value="1">
+                  <label class="cart-form__label product-form__label" for="plus"></label>
+                  <input class="cart-form__input plus product-form__input--plus" type="button" name="plus" value="+">
+                </form>
+              </article>
+            </li>
+            <li class="product-card mix category-vegetables">
+              <article class="product-items">
+                <div class="product-card__badge">
+                  <a class="badge product-card__news" href="#">НОВИНКА</a>
+                </div>
+                <div class="product-contect">
+                  <a class="product-card__img" href="#">
+                    <img src="images/product-card/paprik.jpg" alt="Перец оранжевый, 1кг" width="300" height="225">
+                  </a>
+                  <a class="product-card__link" href="#">
+                    <p class="product-card__text">Перец оранжевый, 1кг</p>
+                  </a>
+                  <div class="product-card__prices">
+                    <p class="product-card__price">349 ₽</p>
+                  </div>
+                  <button class="product-card__btn product-card__btn-heart" type="button">
+                    <svg width="32" height="29" viewBox="0 0 32 29" fill="none">
+                      <path d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1282 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8718 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0218 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0412 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z" fill="#C1C1C1" />
+                    </svg>
+                  </button>
+                  <button class="product-card__btn product-card__btn-cart" type="button">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <rect x="1.52588e-05" width="32" height="32" rx="3" fill="#63A60E" />
+                      <path d="M23.8989 10.0194C23.8113 9.9099 23.6787 9.84619 23.5385 9.84619H11.2548L10.9113 8.35775C10.8629 8.14834 10.6765 8 10.4615 8H8.46155C8.20667 8 8.00002 8.20666 8.00002 8.46156C8.00002 8.71647 8.20667 8.92309 8.46155 8.92309H10.0944L12.426 19.0269C12.4743 19.2363 12.6608 19.3846 12.8757 19.3846H22.1231C22.378 19.3846 22.5846 19.178 22.5846 18.9231C22.5846 18.6682 22.3779 18.4616 22.1231 18.4616H13.2429L12.8879 16.9231H22.1539C22.3698 16.9231 22.5568 16.7735 22.6042 16.5629L23.9888 10.409C24.0195 10.2722 23.9865 10.1289 23.8989 10.0194ZM21.7846 16H12.6749L11.4678 10.7692H22.9615L21.7846 16Z" fill="white" />
+                      <path d="M14.7692 20C13.8361 20 13.0769 20.7591 13.0769 21.6923C13.0769 22.6254 13.8361 23.3846 14.7692 23.3846C15.7024 23.3846 16.4615 22.6254 16.4615 21.6923C16.4615 20.7591 15.7024 20 14.7692 20ZM14.7692 22.4615C14.3451 22.4615 14 22.1164 14 21.6923C14 21.2681 14.3451 20.9231 14.7692 20.9231C15.1934 20.9231 15.5384 21.2681 15.5384 21.6923C15.5384 22.1164 15.1934 22.4615 14.7692 22.4615Z" fill="white" />
+                      <path d="M20.3077 20C19.3745 20 18.6154 20.7591 18.6154 21.6923C18.6154 22.6254 19.3745 23.3846 20.3077 23.3846C21.2408 23.3846 22 22.6254 22 21.6923C22 20.7591 21.2408 20 20.3077 20ZM20.3077 22.4615C19.8835 22.4615 19.5384 22.1165 19.5384 21.6923C19.5384 21.2682 19.8835 20.9231 20.3077 20.9231C20.7318 20.9231 21.0769 21.2682 21.0769 21.6923C21.0769 22.1165 20.7318 22.4615 20.3077 22.4615Z" fill="white" />
+                    </svg>
+                  </button>
+                </div>
+                <form class="cart-form product-form" action="#">
+                  <label class="cart-form__label product-form__label" for="minus"></label>
+                  <input class="cart-form__input minus product-form__input--minus" type="button" name="minus" value="-">
+                  <label class="cart-form__label product-form__label" for="number"></label>
+                  <input class="cart-form__input cart-form__number product-form__input" type="number" step="1" min="1" max="99" name="number" value="1">
+                  <label class="cart-form__label product-form__label" for="plus"></label>
+                  <input class="cart-form__input plus product-form__input--plus" type="button" name="plus" value="+">
+                </form>
+              </article>
+            </li>
+          </ul>
+          <a class="link link--active" href="#">Показать еще</a>
+        </div>
+      </section>
     </main>
 
 
@@ -172,10 +581,10 @@
         <div class="footer-top">
           <div class="footer-top__letter">
             <p class="footer-top__letter-text">Следите за нашими акциями</p>
-            <form class="form footer-top__letter-form" action="#">
-              <label class="form-label footer-top__letter-label" for="email"></label>
-              <input class="form-input footer-top__letter-input" type="text" placeholder="email@email.com" name="email" id="email" required>
-              <button class="button footer-top__button" type="submit">ПОДПИСАТЬСЯ</button>
+            <form class="footer-top__letter-form" action="#">
+              <label class=" footer-top__letter-label" for="email"></label>
+              <input class=" footer-top__letter-input" type="text" placeholder="email@email.com" name="email" id="email" required>
+              <button class="footer-top__button" type="submit">ПОДПИСАТЬСЯ</button>
             </form>
           </div>
           <div class="footer-top__inner">
@@ -221,16 +630,62 @@
             </ul>
             <ul class="social">
               <li class="social-item">
-                <a class="social-link" href="#" style="background-image: url('images/social/facebook.svg');"></a>
+                <a class="social-link" href="#">
+                  <svg width="33" height="32" viewBox="0 0 33 32" fill="none">
+                    <g clip-path="url(#clip0_20_50)">
+                      <path d="M21.6503 5.31333H24.5514V0.225333C24.0509 0.156 22.3296 0 20.3249 0C16.1421 0 13.2767 2.64933 13.2767 7.51867V12H8.66095V17.688H13.2767V32H18.9359V17.6893H23.365L24.0681 12.0013H18.9346V8.08267C18.9359 6.43867 19.3755 5.31333 21.6503 5.31333Z" fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_20_50">
+                        <rect width="31.7783" height="32" fill="white" transform="translate(0.46875)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
               </li>
               <li class="social-item">
-                <a class="social-link" href="#" style="background-image: url('images/social/youtube.svg');"></a>
+                <a class="social-link" href="#">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <g clip-path="url(#clip0_20_48)">
+                      <path d="M31.2392 7.90543L31.2789 8.16677C30.8949 6.79477 29.8581 5.7361 28.5407 5.35077L28.5128 5.3441C26.0355 4.66677 16.0664 4.66677 16.0664 4.66677C16.0664 4.66677 6.12239 4.65343 3.61985 5.3441C2.27722 5.7361 1.23913 6.79477 0.861762 8.13877L0.855142 8.16677C-0.0704011 13.0348 -0.0770217 18.8841 0.896189 24.0961L0.855142 23.8321C1.23913 25.2041 2.2759 26.2628 3.59337 26.6481L3.62118 26.6548C6.09591 27.3334 16.0677 27.3334 16.0677 27.3334C16.0677 27.3334 26.0103 27.3334 28.5142 26.6548C29.8581 26.2628 30.8962 25.2041 31.2736 23.8601L31.2802 23.8321C31.7013 21.5681 31.9423 18.9628 31.9423 16.3014C31.9423 16.2041 31.9423 16.1054 31.9409 16.0068C31.9423 15.9161 31.9423 15.8081 31.9423 15.7001C31.9423 13.0374 31.7013 10.4321 31.2392 7.90543ZM12.8859 20.8681V11.1441L21.1827 16.0134L12.8859 20.8681Z" fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_20_48">
+                        <rect width="31.7783" height="32" fill="white" transform="translate(0.16394)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
               </li>
               <li class="social-item">
-                <a class="social-link" href="#" style="background-image: url('images/social/telegram.svg');"></a>
+                <a class="social-link" href="#">
+                  <svg width="33" height="32" viewBox="0 0 33 32" fill="none">
+                    <g clip-path="url(#clip0_20_46)">
+                      <path d="M13.3281 20.2415L12.8024 27.6868C13.5545 27.6868 13.8802 27.3615 14.2708 26.9708L17.7969 23.5775L25.1032 28.9655C26.4432 29.7175 27.3873 29.3215 27.7488 27.7241L32.5447 5.0948L32.546 5.09347C32.971 3.0988 31.8296 2.3188 30.5241 2.80813L2.3341 13.6761C0.410193 14.4281 0.439323 15.5081 2.00705 15.9975L9.2141 18.2548L25.9546 7.7068C26.7425 7.18147 27.4588 7.47213 26.8696 7.99747L13.3281 20.2415Z" fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_20_46">
+                        <rect width="31.7783" height="32" fill="white" transform="translate(0.85907)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
               </li>
               <li class="social-item">
-                <a class="social-link" href="#" style="background-image: url('images/social/instagram.svg');"></a>
+                <a class="social-link" href="#">
+                  <svg width="33" height="32" viewBox="0 0 33 32" fill="none">
+                    <g clip-path="url(#clip0_20_42)">
+                      <path d="M16.4486 7.78394C11.9427 7.78394 8.29486 11.4613 8.29486 15.9946C8.29486 20.5319 11.9467 24.2053 16.4486 24.2053C20.9545 24.2053 24.6024 20.5279 24.6024 15.9946C24.6024 11.4573 20.9506 7.78394 16.4486 7.78394ZM16.4486 21.3239C13.5237 21.3239 11.1562 18.9386 11.1562 15.9946C11.1562 13.0506 13.525 10.6653 16.4486 10.6653C19.3722 10.6653 21.741 13.0506 21.741 15.9946C21.7424 18.9386 19.3736 21.3239 16.4486 21.3239Z" fill="white" />
+                      <path d="M22.995 0.101248C20.0714 -0.0360854 12.8299 -0.0294187 9.90363 0.101248C7.33224 0.222581 5.06406 0.847914 3.23549 2.68925C0.179476 5.76658 0.570084 9.91325 0.570084 15.9946C0.570084 22.2186 0.225819 26.2692 3.23549 29.2999C6.30342 32.3879 10.4809 31.9839 16.4486 31.9839C22.5713 31.9839 24.6845 31.9879 26.8494 31.1439C29.7929 29.9932 32.0147 27.3439 32.2319 22.5852C32.3696 19.6399 32.3616 12.3492 32.2319 9.40258C31.9697 3.78525 28.9759 0.378581 22.995 0.101248ZM27.6227 27.2639C25.6193 29.2812 22.84 29.1012 16.4102 29.1012C9.78976 29.1012 7.13495 29.1999 5.1978 27.2439C2.9667 25.0079 3.37055 21.4172 3.37055 15.9732C3.37055 8.60658 2.61978 3.30125 9.96189 2.92258C11.6488 2.86258 12.1453 2.84258 16.3917 2.84258L16.4513 2.88258C23.5074 2.88258 29.0434 2.13858 29.3758 9.53058C29.4513 11.2172 29.4685 11.7239 29.4685 15.9932C29.4671 22.5826 29.5916 25.2719 27.6227 27.2639Z" fill="white" />
+                      <path d="M24.9255 9.37859C25.9778 9.37859 26.8309 8.51957 26.8309 7.45992C26.8309 6.40027 25.9778 5.54126 24.9255 5.54126C23.8732 5.54126 23.0201 6.40027 23.0201 7.45992C23.0201 8.51957 23.8732 9.37859 24.9255 9.37859Z" fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_20_42">
+                        <rect width="31.7783" height="32" fill="white" transform="translate(0.554199)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
               </li>
             </ul>
           </adress>

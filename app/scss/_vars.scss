@@ -10,28 +10,7 @@ $yellow-900: #FFB800;
 $silver-600: #C1C1C1;
 $silver-100: #F6F6F6;
 $white: #FFFFFF;
-
-
-%background-image-cover{
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-%background-image-contain{
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-%pseudo-element{
-  content: "";
-  position: absolute;
-}
-
-%display-flex{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+$black: #000000;
 
 %opensans-300 {
   font-family: 'OpenSans', sans-serif;
@@ -50,7 +29,7 @@ $white: #FFFFFF;
 
 %opensans-700 {
   font-family: 'OpenSans', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 %ruda-400 {

@@ -1,0 +1,332 @@
+.header {
+  letter-spacing: 0.03em;
+
+  &-logo {
+    margin-right: 23px;
+  }
+
+  &-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-contact-item:not(:last-child) {
+    margin-right: 48px;
+  }
+
+  &-contact-link {
+    color: $white;
+    position: relative;
+    transition: opacity 0.4s, box-shadow 0.4s, color 0.4s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 3px #EFF6E7;
+      border-radius: 3px;
+    }
+
+    &:active {
+      color: $green-200;
+    }
+  }
+
+  &-link-contact--adress::before,
+  &-link-contact--tel::before {
+    content: "";
+    position: absolute;
+    height: 22px;
+    left: 0;
+    top: -5px;
+  }
+
+  &-link-contact--adress {
+    padding-left: 44px;
+  }
+
+  &-link-contact--tel {
+    padding-left: 34px;
+  }
+
+  &-link-contact--adress::before {
+    background-image: url(../images/icons/del-address.svg);
+    width: 32px;
+  }
+
+  &-link-contact--tel::before {
+    background-image: url(../images/icons/tel.svg);
+    width: 22px;
+  }
+}
+
+.header-top {
+  background-color: $dark-800;
+
+  &__inner {
+    padding: 17px 0 15px;
+    font-size: 13px;
+    @extend %opensans-700;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.header-bottom {
+  background-color: $green-900;
+
+  &__inner {
+    padding: 25px 0;
+    font-size: 14px;
+    @extend %opensans-600;
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    padding: 15px 38px 15px 61px;
+    color: $green-900;
+    background-color: $white;
+    border-radius: 6px;
+    position: relative;
+    letter-spacing: 0.03em;
+    max-width: 240px;
+    width: 100%;
+    margin-right: 32px;
+    transition: background-color 0.4s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../images/nav.svg);
+      width: 25px;
+      height: 17px;
+      left: 15px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../images/arrow.svg);
+      width: 7px;
+      height: 7px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      right: 17px;
+      top: 22px;
+      transition: transform 0.4s;
+    }
+  }
+
+  &__button--active::after {
+    transform: rotate(180deg);
+    top: 20px;
+  }
+
+  &__button--active {
+    background-color: $green-200;
+    border-radius: 6px 6px 0px 0px;
+  }
+
+  &__catalog-menu {
+    position: absolute;
+    background-color: $white;
+    border: 1px solid #EBEBEB;
+    max-width: 240px;
+    width: 100%;
+    border-radius: 0 0 6px 6px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+
+  &__catalog-menu--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__catalog-item {
+    padding: 5px 0;
+    position: relative;
+    transition: box-shadow 0.4s;
+  }
+
+  &__catalog-item::before {
+    height: 100%;
+    width: 3px;
+    background-color: $green-900;
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &__catalog-item:not(:last-child) {
+    border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+  }
+
+  &__catalog-link {
+    font-size: 16px;
+    color: #000;
+    line-height: 1.2;
+    @extend %opensans-400;
+    padding: 10px 24px;
+    transition: color 0.4s;
+    width: 100%;
+    display: block;
+  }
+
+  &__catalog-link:hover {
+    color: $green-900;
+  }
+
+  &__catalog-item:hover::before {
+    opacity: 1;
+  }
+
+  &__catalog-item:focus {
+    box-shadow: inset 0 0 0 3px $green-200;
+  }
+
+  &__catalog-link:active {
+    color: $silver-600;
+  }
+
+  &__form {
+    margin-right: 60px;
+  }
+
+  &__form-input {
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-image: url(../images/search.svg);
+    background-position: 15px 15px;
+  }
+
+  &__form-button {
+    text-transform: uppercase;
+    padding: 15px 54px;
+    background-color: $dark-800;
+    color: $white;
+    border-radius: 0 6px 6px 0;
+    transition: background-color 0.4s, box-shadow 0.4s, color 0.4s;
+  }
+
+  &__form-button:hover {
+    background-color: rgba(49, 53, 43, 0.85);
+  }
+
+  &__form-button:focus {
+    box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
+  }
+
+  &__form-button:active {
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  &-link {
+    color: $white;
+    transition: opacity 0.4s, box-shadow 0.4s, color 0.4s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 3px #EFF6E7;
+      border-radius: 3px;
+    }
+
+    &:active {
+      color: $green-200;
+    }
+  }
+
+}
+
+.icons {
+  display: flex;
+
+  &-item {
+    position: relative;
+    width: 32px;
+    height: 30px;
+  }
+
+  &-item:not(:last-child) {
+    margin-right: 27px;
+  }
+
+  &-link {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+
+    &::after {
+      transition: background-color 0.5s, opacity 0.5s, box-shadow 0.5s;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      content: "";
+      bottom: -10px;
+      right: -8px;
+      border-radius: 3px;
+    }
+
+    &:hover::after {
+      background-color: $white;
+      opacity: 0.1;
+    }
+
+    &:focus::after {
+      background-color: rgba(255, 255, 255, 0.1);
+      box-shadow: inset 0px 0px 0px 3px #EFF6E7;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    &:active::after {
+      background-color: $white;
+      opacity: 0.1;
+    }
+  }
+
+  &-num {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $white;
+    top: -8px;
+    left: -6px;
+    color: $red-900;
+    @extend %opensans-600;
+    font-size: 10px;
+    line-height: 18px;
+    text-align: center;
+  }
+}
