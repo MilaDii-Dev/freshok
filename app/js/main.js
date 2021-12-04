@@ -1,44 +1,37 @@
 $(function () {
-  $('.slider-inner').slick({
+
+  $('.user-nav__btn').on('click', function () {
+    $('.cart').toggleClass('cart--active');
+    $('body').toggleClass('body--active');
+  });
+
+  $('.button--catalog').on('click', function () {
+    $('.catalog__menu').toggleClass('catalog__menu--active');
+    $('.button--catalog').toggleClass('button--catalog--active');
+  });
+
+  $('.product-card__btn--cart').on('click', function () {
+    $('.product-card__counter').toggleClass('product-card__counter--active');
+  });
+
+  $('.main-slider__items').slick({
     dots: false,
-    prevArrow: $('.arrow-prev'),
-    nextArrow: $('.arrow-next'),
+    prevArrow: '<button class="arrow arrow-prev" type="button"><svg class="arrow__image"><use xlink:href="images/sprite/sprite.svg#prevarrow"></use></svg></button>',
+    nextArrow: '<button class="arrow arrow-next" type="button"><svg class="arrow__image"><use xlink:href="images/sprite/sprite.svg#nextarrow"></use></svg></button>',
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: false
   });
 
-  var mixer = mixitup('.product-cards')
+  var containerEl1 = document.querySelector('[data-ref="container-1"]');
+  var containerEl2 = document.querySelector('[data-ref="container-2"]');
 
-  $('.header-bottom__button').on('click', function () {
-    $('.header-bottom__catalog-menu').toggleClass('header-bottom__catalog-menu--active');
-    $('.header-bottom__button').toggleClass('header-bottom__button--active');
-  });
+  var config = {
+    controls: {
+      scope: 'local'
+    }
+  };
 
-  $('.icons-link__cart, .cart-btn').not('.cart-btn__small').on('click', function () {
-    $('.cart').toggleClass('cart--active');
-    $('body').toggleClass('body--active');
-  });
-
-$('.product-card__btn-cart').on('click', function () {
-  $('.product-form').toggleClass('product-form--active');
-});
-
-  $(document).ready(function () {
-    $('.minus').click(function () {
-      var $input = $(this).parent().find('.cart-form__number');
-      var count = parseInt($input.val()) - 1;
-      count = count < 1 ? 1 : count;
-      $input.val(count);
-      $input.change();
-      return false;
-    });
-    $('.plus').click(function () {
-      var $input = $(this).parent().find('.cart-form__number');
-      $input.val(parseInt($input.val()) + 1);
-      $input.change();
-      return false;
-    });
-  });
-
+  var mixer1 = mixitup(containerEl1, config);
+  var mixer2 = mixitup(containerEl2, config);
 });

@@ -11,8 +11,21 @@ $silver-600: #C1C1C1;
 $silver-100: #F6F6F6;
 $white: #FFFFFF;
 $black: #000000;
+$border: #EBEBEB;
+$hover: #4D810C;
+$active: #F3F3F2;
+$placeholder: #4F4F4F;
 
-%opensans-300 {
+$opensans: "OpenSans", sans-serif;
+$ruda: "Ruda", sans-serif;
+
+$fw-300: 300;
+$fw-400: 400;
+$fw-600: 600;
+$fw-700: 700;
+$fw-900: 900;
+
+ %opensans-300 {
   font-family: 'OpenSans', sans-serif;
   font-weight: 300;
 }
@@ -50,4 +63,4 @@ $black: #000000;
 %ruda-900 {
   font-family: 'Ruda', sans-serif;
   font-weight: 900;
-}
+} 

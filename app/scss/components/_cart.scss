@@ -1,0 +1,234 @@
+  .cart {
+    position: absolute;
+    height: 100vh;
+    background-color: $silver-100;
+    max-width: 475px;
+    width: 100%;
+    letter-spacing: 0.03em;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+    z-index: 15;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s;
+
+    &__title {
+      font-size: 24px;
+      line-height: 1.2;
+      color: $black;
+      @extend %opensans-400;
+      margin-bottom: 12px;
+    }
+
+    &--active {
+      opacity: 1;
+      visibility: visible;
+      overflow-y: auto;
+    }
+
+    &__title--bottom {
+      margin-bottom: 0;
+    }
+
+    &__inner {
+      padding: 12px;
+    }
+
+    &__item {
+      height: 84px;
+      max-width: 452px;
+      background-color: $white;
+      border: 1px solid $silver-600;
+      border-radius: 3px;
+      padding: 12px;
+      position: relative;
+      transition: background-color 0.4s, box-shadow 0.3s, border 0.4s;
+
+      &:hover {
+        background-color: $green-200;
+      }
+
+      &:focus {
+        box-shadow: 0px 0px 0px 4px rgba(99, 166, 14, 0.5);
+      }
+
+      &:active {
+        border: 1px solid $green-900;
+      }
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &__content {
+      flex-direction: row;
+      height: 100%;
+    }
+
+    &__image {
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      width: 60px;
+      height: 60px;
+      margin-right: 20px;
+    }
+
+    &-info {
+      max-width: 170px;
+      width: 100%;
+      align-self: center;
+    }
+
+    &-info__link {
+      @extend %opensans-600;
+      color: $dark-900;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    &-price {
+      display: block;
+      @extend %opensans-600;
+      font-size: 20px;
+      line-height: 1;
+      color: $dark-500;
+      align-items: flex-end;
+    }
+
+    &-info__unit {
+      font-size: 14px;
+    }
+
+    &-form {
+      display: flex;
+    }
+
+    &-form__input {
+      background-color: $green-900;
+      width: 24px;
+      height: 24px;
+      color: $white;
+    }
+
+    &-form__input:not(.cart-form__number) {
+      cursor: pointer;
+    }
+
+    &-form__number {
+      background-color: rgba(99, 166, 14, 0.1);
+      font-size: 16px;
+      line-height: 1;
+      color: $dark-500;
+      width: 36px;
+      appearance: none;
+      text-align: center;
+    }
+
+    &-form__number::-webkit-inner-spin-button {
+      display: none;
+    }
+
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+      background-color: $white;
+      padding: 24px;
+    }
+
+    &-bottom__price {
+      font-size: 24px;
+    }
+
+    &-link {
+      text-align: center;
+      padding: 23px 0;
+      border-radius: 0;
+      @extend %opensans-400;
+    }
+
+    &-btn__small {
+      position: relative;
+      width: 24px;
+      height: 24px;
+      top: 5px;
+      right: 5px;
+      align-self: flex-start;
+
+      &::after,
+      &::before {
+        background-color: $silver-600;
+        height: 1px;
+        width: 15px;
+      }
+    }
+  }
+
+  .cart-top {
+    background-color: $white;
+    padding: 19px 26px 12px 24px;
+    position: relative;
+
+    &__clean {
+      @extend %opensans-300;
+      font-size: 14px;
+      line-height: 1.2;
+      color: $black;
+      padding: 0;
+    }
+
+    &__btn {
+      width: 40px;
+      height: 40px;
+      right: 26px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 3px;
+      transition: background-color 0.4s, box-shadow 0.4s;
+
+      &:hover {
+        background-color: $green-100;
+      }
+
+      &:focus {
+        background-color: rgba(255, 255, 255, 0.0001);
+        box-shadow: 0px 0px 0px 3px #E0EDCF;
+      }
+
+      &:active {
+        background-color: rgba(193, 193, 193, 0.3);
+      }
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        width: 32px;
+        height: 2px;
+        background-color: $dark-800;
+        display: block;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transition: background-color 0.4s;
+      }
+
+      &:hover::after,
+      &:hover::before {
+        background-color: $green-900;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
