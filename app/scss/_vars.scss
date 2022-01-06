@@ -15,52 +15,14 @@ $border: #EBEBEB;
 $hover: #4D810C;
 $active: #F3F3F2;
 $placeholder: #4F4F4F;
+$focus: #5A5A5A;
 
-$opensans: "OpenSans", sans-serif;
-$ruda: "Ruda", sans-serif;
+
+$opensans: "OpenSans", "Roboto", sans-serif;
+$ruda: "Ruda", "Roboto", sans-serif;
 
 $fw-300: 300;
 $fw-400: 400;
 $fw-600: 600;
 $fw-700: 700;
 $fw-900: 900;
-
- %opensans-300 {
-  font-family: 'OpenSans', sans-serif;
-  font-weight: 300;
-}
-
-%opensans-400 {
-  font-family: 'OpenSans', sans-serif;
-  font-weight: 400;
-}
-
-%opensans-600 {
-  font-family: 'OpenSans', sans-serif;
-  font-weight: 600;
-}
-
-%opensans-700 {
-  font-family: 'OpenSans', sans-serif;
-  font-weight: 700;
-}
-
-%ruda-400 {
-  font-family: 'Ruda', sans-serif;
-  font-weight: 400;
-}
-
-%ruda-600 {
-  font-family: 'Ruda', sans-serif;
-  font-weight: 600;
-}
-
-%ruda-700 {
-  font-family: 'Ruda', sans-serif;
-  font-weight: 700;
-}
-
-%ruda-900 {
-  font-family: 'Ruda', sans-serif;
-  font-weight: 900;
-} 

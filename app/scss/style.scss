@@ -6,11 +6,13 @@
 @import 'libs';
 //Компоненты
 @import 'components/_header.scss';
-@import 'components/_cart.scss';
 @import 'components/_product-card.scss';
+@import 'components/_cart.scss';
 @import 'components/_footer.scss';
 //Главная страница
-@import 'home-page/_slider.scss';
+@import 'home-page/_main-slider.scss';
 @import 'home-page/_product.scss';
 @import 'home-page/_advantages.scss';
+
+
 

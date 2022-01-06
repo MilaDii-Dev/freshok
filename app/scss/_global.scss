@@ -11,20 +11,21 @@ body {
   font-weight: $fw-400;
   min-height: 100vh;
   background-color: $white;
+  position: relative;
+}
 
-  &--active {
-    position: relative;
-    overflow-y: hidden;
-
-    &::after {
-      background-color: rgba($black, 0.15);
-      position: absolute;
-      content: "";
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
+.body--active {
+  &::after {
+    background-color: rgba($black, 0.15);
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
   }
 }
 
@@ -32,7 +33,6 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  min-height: 100vh;
 }
 
 .container {
@@ -45,6 +45,10 @@ body {
   flex: 1 0 auto;
 }
 
+.section {
+  padding: 72px 0;
+}
+
 .title {
   font-family: $ruda;
   font-weight: $fw-600;
@@ -55,7 +59,7 @@ body {
 }
 
 .link {
-  padding: 12px 24px;
+  padding: 13px 30px;
   background-color: $green-900;
   color: $white;
   line-height: 1.3;
@@ -98,29 +102,57 @@ body {
 }
 
 .button {
+  &--subscribe {
+    font-weight: $fw-700;
+    font-size: 12px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    padding: 12px 17px;
+    border-radius: 0 6px 6px 0;
+    background-color: $green-900;
+    color: $white;
+    transition: background-color 0.4s, box-shadow 0.3s, color 0.4s;
+
+    &:focus {
+      box-shadow: 0 0 0 4px $green-200;
+    }
+
+    &:hover {
+      background-color: $hover;
+    }
+
+    &:active {
+      box-shadow: inset 0 4px 4px rgba($black, 0.25);
+      color: rgba($white, 0.5);
+    }
+  }
+
   &--catalog {
-    padding: 15px 38px 15px 61px;
+    padding: 15px 46px 15px 61px;
     color: $green-900;
     background-color: $white;
     border-radius: 6px;
     position: relative;
     letter-spacing: 0.03em;
-    max-width: 240px;
-    width: 100%;
-    margin-right: 40px;
+    margin-right: 29px;
     transition: background-color 0.4s, box-shadow 0.4s;
 
     &:hover {
       box-shadow: inset 0 4px 4px rgba($black, 0.25);
     }
 
+    &--active {
+      background-color: $green-200;
+      border-radius: 6px 6px 0 0;
+    }
+
     &::before {
       content: "";
       position: absolute;
-      background-image: url(../images/nav.svg);
+      background-image: url('../images/nav.svg');
       width: 25px;
       height: 17px;
-      left: 15px;
+      left: 17px;
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -128,25 +160,20 @@ body {
     &::after {
       content: "";
       position: absolute;
-      background-image: url(../images/arrow.svg);
+      background-image: url('../images/arrow.svg');
       width: 8px;
       height: 8px;
       background-repeat: no-repeat;
       background-size: contain;
-      right: 17px;
+      right: 18px;
       top: 22px;
       transition: transform 0.4s;
     }
-  }
 
-  &--catalog--active::after {
-    transform: rotate(180deg);
-    top: 20px;
-  }
-
-  &--catalog--active {
-    background-color: $green-200;
-    border-radius: 6px 6px 0 0;
+    &--active::after {
+      transform: rotate(180deg);
+      top: 20px;
+    }
   }
 
   &--search {
@@ -156,20 +183,22 @@ body {
     color: $white;
     border-radius: 0 6px 6px 0;
     transition: background-color 0.4s, box-shadow 0.4s, color 0.4s;
+
+    &:focus {
+      box-shadow: 0 0 0 4px rgba($white, 0.5);
+    }
+
+    &:hover {
+      background-color: rgba($dark-800, 0.85);
+    }
+
+    &:active {
+      box-shadow: inset 0 4px 4px rgba($black, 0.25);
+      color: rgba($white, 0.5);
+    }
   }
 
-  &--search:hover {
-    background-color: rgba(49, 53, 43, 0.85);
-  }
 
-  &--search:focus {
-    box-shadow: 0 0 0 4px rgba($white, 0.5);
-  }
-
-  &--search:active {
-    box-shadow: inset 0 4px 4px rgba($black, 0.25);
-    color: rgba($white, 0.5);
-  }
 }
 
 .logo {
@@ -204,32 +233,28 @@ body {
     border-radius: 6px 0 0 6px;
     transition: box-shadow 0.4s, background-color 0.3s;
 
-    &:hover {
-      background-color: $green-100;
-    }
-
     &:focus {
       box-shadow: 0 0 0 3px $green-200;
+    }
+
+    &:hover {
+      background-color: $green-100;
     }
 
     &:active {
       box-shadow: inset 0 4px 4px rgba($black, 0.25);
     }
-  }
 
-  &__field {
     &::placeholder {
       color: $dark-800;
       font-weight: $fw-400;
       font-family: $opensans;
     }
-  }
 
-  &__field {
     &--search {
       background-repeat: no-repeat;
       background-size: 20px;
-      background-image: url(../images/search.svg);
+      background-image: url('../images/search.svg');
       background-position: 15px 15px;
     }
   }

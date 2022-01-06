@@ -15,6 +15,7 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const svgSprite = require('gulp-svg-sprite');
 const fileinclude = require('gulp-file-include');
+const cheerio = require('gulp-cheerio');
 
 function browsersync() {
   browserSync.init({
@@ -23,6 +24,16 @@ function browsersync() {
     },
     notify: false
   })
+}
+
+function fileincludes() {
+  return src(['app/html/**/*.html'])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(dest('app'))
+    .pipe(browserSync.stream())
 }
 
 function styles() {
@@ -53,17 +64,28 @@ function scripts() {
 }
 
 function svgSprites() {
-  return src('app/images/icons/*.svg') // выбираем в папке с иконками все файлы с расширением svg
+  return src(['app/images/icons/*.svg'])
+     .pipe(cheerio({
+      run: function ($) {
+        $('[fill]').removeAttr('fill');
+        $('[stroke]').removeAttr('stroke');
+        $('[style]').removeAttr('style');
+      },
+      parserOptions: {
+        xmlMode: true 
+      }
+    }))
+
     .pipe(
       svgSprite({
         mode: {
           stack: {
-            sprite: '../sprite.svg', // указываем имя файла спрайта и путь
+            sprite: '../sprite.svg',
           },
         },
       })
     )
-    .pipe(dest('app/images/sprite')); // указываем, в какую папку поместить готовый файл спрайта
+    .pipe(dest('app/images/sprite'));
 }
 
 function images() {
@@ -94,23 +116,13 @@ function images() {
 
 function build() {
   return src([
-      'app/**/*.html',
+      'app/html/*.html',
       'app/css/style.min.css',
       'app/js/main.min.js',
     ], {
       base: 'app'
     })
     .pipe(dest('dist'))
-}
-
-function fileincludes() {
-  return src(['app/html/*.html'])
-    .pipe(fileinclude({
-      prefix: '@@',
-      basepath: '@file'
-    }))
-    .pipe(dest('app'))
-    .pipe(browserSync.stream())
 }
 
 function cleandist() {
@@ -120,8 +132,8 @@ function cleandist() {
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/**/*.html']).on('change', browserSync.reload);
   watch(['app/images/icons/*.svg'], svgSprites);
+  watch(['app/html/**/*.html'], fileincludes);
 }
 
 exports.styles = styles;
