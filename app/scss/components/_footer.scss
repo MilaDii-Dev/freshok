@@ -15,70 +15,27 @@
     right: 0;
     left: 0;
   }
-}
 
-.footer-top {
-  display: flex;
-  padding: 30px 0;
-
-  &__form {
-    max-width: 315px;
-    width: 100%;
+  &__top {
     display: flex;
-    flex-direction: column;
-    margin-right: 143px;
-  }
-
-  &__wrapper {
-    display: flex;
-  }
-
-  &__label {
-    margin-bottom: 18px;
-    line-height: 1;
-    display: block;
-  }
-
-  &__field {
-    padding: 10px;
-    width: 100%;
-    max-width: 180px;
-    border-radius: 6px 0 0 6px;
-    transition: box-shadow 0.4s, background-color 0.3s;
-
-    &::placeholder {
-      line-height: 1;
-      color: $placeholder;
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 3px $green-200;
-    }
-
-    &:hover {
-      background-color: $green-100;
-    }
-
-    &:active {
-      box-shadow: inset 0 4px 4px rgba($black, 0.25);
-    }
+    padding: 30px 0;
   }
 
   &__items {
     width: 100%;
     max-width: 595px;
-    margin-right: 100px;
+    margin-right: 93px;
     column-count: 3;
   }
 
   &__item {
     &:not(:last-child) {
-      margin: 0 40px 20px 0;
+      margin: 0 30px 20px 0;
     }
   }
 
   &__link {
-    padding: 5px 0;
+    padding: 5px 7px;
     transition: opacity 0.4s, color 0.4s;
 
     &:focus {
@@ -99,32 +56,29 @@
   }
 
   &__contact-link {
+    transition: opacity 0.4s, color 0.4s;
 
-    &:not(p) {
-      transition: opacity 0.4s, color 0.4s;
+    &:focus {
+      color: $green-900;
+    }
 
-      &:focus {
-        color: $green-900;
-      }
+    &:hover {
+      opacity: 0.7;
+    }
 
-      &:hover {
-        opacity: 0.7;
-      }
-
-      &:active {
-        opacity: 0.5;
-      }
+    &:active {
+      opacity: 0.5;
     }
   }
-}
 
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 17px;
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 17px;
+  }
 
-  &__accept {
+  &__carts {
     display: flex;
   }
 
@@ -134,7 +88,7 @@
     }
   }
 
-  &__link {
+  &__cart {
     display: inline-block;
     transition: box-shadow 0.5s, opacity 0.5s;
     border-radius: 6px;
@@ -153,6 +107,7 @@
   }
 
   &__icon {
+    width: 93px;
     height: 30px;
     fill: $white;
     transition: opacity 0.4s, box-shadow 0.4s, fill 0.3s;
@@ -170,12 +125,8 @@
       fill: $green-200;
     }
 
-    &--mc {
+    &--small {
       width: 49px;
-    }
-
-    &--visa {
-      width: 100px;
     }
   }
 }

@@ -3,22 +3,36 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  padding-top: 40px;
+  position: relative;
 
-  &__counter {
+  &__inner {
     position: absolute;
+    top: -6px;
+    left: 13px;
+    right: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+
+  &__counters {
+    margin-right: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s;
-    right: 70px;
-    bottom: 22px;
 
     &--active {
       opacity: 1;
       visibility: visible;
     }
+  }
+
+  &__counter {
+    height: 26px;
 
     &--number {
       background-color: rgba($green-900, 0.1);
@@ -26,69 +40,32 @@
       line-height: 1;
       font-weight: $fw-400;
       width: 36px;
-      height: 24px;
       color: $dark-500;
-      text-align: center;
 
       &::-webkit-inner-spin-button {
         display: none;
       }
-    }
-
-    &--plus,
-    &--minus {
-      background-color: $green-900;
-      width: 24px;
-      height: 24px;
-      position: relative;
-
-      &::after,
-      &::before {
-        width: 16px;
-        height: 2px;
-        background-color: $white;
-        content: "";
-        position: absolute;
-        bottom: 11px;
-        right: 4px;
-      }
-    }
-
-    &--plus {
-      border-radius: 0 3px 3px 0;
-
-      &::before {
-        transform: rotate(90deg);
-      }
-    }
-
-    &--minus {
-      border-radius: 3px 0 0 3px;
     }
   }
 
   &__bottom {
     display: flex;
     justify-content: space-between;
-    padding: 0 21px 17px 23px;
+    padding: 7px 24px 18px 19px;
   }
 
   &__img {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 0 10px 0;
+    margin-bottom: 10px;
     position: relative;
 
-    &::before,
     &::after {
       position: absolute;
       content: "";
       opacity: 0;
       transition: opacity 0.4s;
-    }
-
-    &::after {
       background-color: rgba($black, 0.1);
       top: 0;
       bottom: 0;
@@ -96,26 +73,26 @@
       left: 0;
     }
 
-    &::before {
-      background-image: url('../images/icon/icon-search.svg');
-      background-repeat: no-repeat;
-      background-size: auto;
-      background-position: center center;
-      background-color: $white;
-      padding: 24px;
-      border-radius: 50%;
-      width: 20px;
-      height: 20px;
-      z-index: 20;
-    }
-
     &:hover {
 
-      &::before,
-      &::after {
+      &::after,
+      .product-card__search {
         opacity: 1;
       }
     }
+  }
+
+  &__box {
+    display: flex;
+  }
+
+  &__search {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    z-index: 20;
+    opacity: 0;
+    transition: opacity 0.4s;
   }
 
   &__image {
@@ -140,7 +117,7 @@
       }
 
       &:hover {
-        fill: $hover;
+        fill: $green-1000;
       }
 
       &:active {
@@ -162,16 +139,14 @@
     }
   }
 
-  &__link {
-    width: 100%;
-    margin-bottom: auto;
-    padding: 0 18px 0 18px;
-  }
-
   &__text {
     font-weight: $fw-600;
     font-size: 14px;
     line-height: 1.4;
+    margin-bottom: auto;
+    width: 100%;
+    max-width: 285px;
+    padding: 0 18px 0 18px;
   }
 
   &__prices {
@@ -218,8 +193,7 @@
       width: 42px;
       height: 42px;
       position: absolute;
-      top: 10px;
-      right: 3px;
+      right: 0;
       transition: box-shadow 0.4s;
 
       &:focus {
@@ -231,5 +205,52 @@
     &--cart {
       border-radius: 3px;
     }
+  }
+}
+
+.jq-number {
+  position: relative;
+  margin-right: 24px;
+  cursor: pointer;
+}
+
+.jq-number__spin {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 26px;
+  height: 26px;
+  background: $green-900;
+
+  &::after,
+  &::before {
+    width: 16px;
+    height: 2px;
+    background-color: $white;
+    content: "";
+    position: absolute;
+    bottom: 11px;
+    right: 4px;
+  }
+
+  &.minus {
+    top: 0;
+    left: -25px;
+    border-radius: 3px 0 0 3px;
+  }
+
+  &.plus {
+    right: -25px;
+    border-radius: 0 3px 3px 0;
+
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.jq-number__field {
+  input{
+    text-align: center;
   }
 }

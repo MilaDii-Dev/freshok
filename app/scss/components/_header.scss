@@ -1,24 +1,26 @@
 .header {
   letter-spacing: 0.03em;
-}
 
-.header-top {
-  background-color: $dark-800;
-  text-transform: uppercase;
+  &__logo {
+    margin-right: 25px;
+  }
 
-  &__inner {
-    padding: 10px 0;
-    font-size: 13px;
-    font-weight: $fw-700;
+  &__top {
+    background-color: $dark-800;
+    text-transform: uppercase;
+  }
+
+  &__inner,
+  &__list {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  &__inner {
+    padding: 6px 0;
+    font-size: 13px;
+    font-weight: $fw-700;
   }
 
   &__item {
@@ -28,7 +30,7 @@
     transition: opacity 0.4s;
 
     &:not(:last-child) {
-      margin-right: 52px;
+      margin-right: 40px;
     }
 
     &:hover {
@@ -36,24 +38,9 @@
     }
 
     &:active {
-      .header-top__icon{
+      .header-top__icon {
         fill: $green-200;
       }
-    }
-  }
-
-  &__link {
-    padding: 6px 0 6px 44px;
-    color: $white;
-    transition: box-shadow 0.4s, color 0.4s;
-
-    &:focus {
-      box-shadow: 0 0 0 3px $green-100;
-      border-radius: 3px;
-    }
-
-    &:active {
-      color: $green-200;
     }
   }
 
@@ -69,17 +56,27 @@
       margin-right: 12px;
     }
   }
-}
 
+  &__link {
+    padding: 11px 11px 9px 44px;
+    color: $white;
+    transition: box-shadow 0.4s, color 0.4s;
 
-.header-bottom {
-  background-color: $green-900;
+    &:focus {
+      box-shadow: 0 0 0 3px $green-100;
+      border-radius: 3px;
+    }
 
-  &__logo {
-    margin-right: 25px;
+    &:active {
+      color: $green-200;
+    }
   }
 
-  &__inner {
+  &__bottom {
+    background-color: $green-900;
+  }
+
+  &__wrapper {
     padding: 25px 0;
     font-size: 14px;
     font-weight: $fw-600;
@@ -92,7 +89,7 @@
   &__menu {
     position: absolute;
     background-color: $white;
-    border: 1px solid $border;
+    border: 1px solid $silver-300;
     max-width: 240px;
     width: 100%;
     border-radius: 0 0 6px 6px;
@@ -108,9 +105,7 @@
   }
 
   &__item {
-    padding: 5px 0;
     position: relative;
-    transition: box-shadow 0.4s;
 
     &::before {
       height: 100%;
@@ -120,17 +115,13 @@
       content: "";
       top: 0;
       bottom: 0;
-      left: 0;
+      left: -1px;
       opacity: 0;
       transition: opacity 0.3s;
     }
 
     &:not(:last-child) {
       border-bottom: 1px solid rgba($silver-600, 0.3);
-    }
-
-    &:focus {
-      box-shadow: inset 0 0 0 3px $green-200;
     }
 
     &:hover::before {
@@ -143,10 +134,15 @@
     color: $black;
     line-height: 1.2;
     font-weight: $fw-400;
-    padding: 10px 24px;
+    padding: 15px 24px;
     transition: color 0.4s;
     width: 100%;
     display: block;
+    transition: box-shadow 0.4s;
+
+    &:focus {
+      box-shadow: inset 0 0 0 3px $green-200;
+    }
 
     &:hover {
       color: $green-900;
@@ -165,11 +161,12 @@
 
   &__item {
     &:not(:last-child) {
-      margin-right: 24px;
+      margin-right: 4px;
     }
   }
 
   &__link {
+    padding: 10px 10px;
     color: $white;
     transition: opacity 0.4s, box-shadow 0.4s, color 0.4s;
 
@@ -192,7 +189,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  align-self: flex-end;
+  align-self: center;
 
   &__item {
     position: relative;
@@ -215,11 +212,11 @@
   }
 
   &__link {
-    width: 100%;
     height: 100%;
     padding: 8px 12px;
     display: block;
     border-radius: 3px;
+    align-self: center;
     transition: background-color 0.4s, box-shadow 0.3s;
 
     &:focus {
@@ -227,13 +224,14 @@
       box-shadow: inset 0 0 0 3px $green-100;
     }
 
-    &:hover {
-      background-color: rgba($white, 0.1);
-    }
-
+    &:hover,
     &:active {
       background-color: rgba($white, 0.1);
     }
+  }
+
+  &__btn {
+    position: relative;
   }
 
   &__num {
@@ -252,4 +250,3 @@
     z-index: 15;
   }
 }
-

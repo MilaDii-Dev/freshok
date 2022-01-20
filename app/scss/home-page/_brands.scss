@@ -1,0 +1,17 @@
+.brands {
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__image {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.4s;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+}

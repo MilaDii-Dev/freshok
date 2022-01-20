@@ -1,0 +1,48 @@
+.filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 51px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    font-weight: $fw-700;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: $dark-500;
+    transition: color 0.4s, box-shadow 0.4s;
+    padding: 0;
+
+    &::after {
+      transition: background-color 0.4s;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $green-200;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      color: $green-900;
+    }
+  }
+}
+
+.mixitup-control-active,
+.filters__btn:active {
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: rgba($green-900, 0.2);
+    bottom: -2px;
+    left: 0;
+    right: 0;
+  }
+}

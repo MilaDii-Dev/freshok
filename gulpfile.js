@@ -55,6 +55,7 @@ function scripts() {
       'node_modules/jquery/dist/jquery.js',
       'node_modules/slick-carousel/slick/slick.js',
       'node_modules/mixitup/dist/mixitup.js',
+      'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
       'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))
@@ -65,14 +66,14 @@ function scripts() {
 
 function svgSprites() {
   return src(['app/images/icons/*.svg'])
-     .pipe(cheerio({
+    .pipe(cheerio({
       run: function ($) {
         $('[fill]').removeAttr('fill');
         $('[stroke]').removeAttr('stroke');
         $('[style]').removeAttr('style');
       },
       parserOptions: {
-        xmlMode: true 
+        xmlMode: true
       }
     }))
 
@@ -116,7 +117,7 @@ function images() {
 
 function build() {
   return src([
-      'app/html/*.html',
+      'app/html/**/*.html',
       'app/css/style.min.css',
       'app/js/main.min.js',
     ], {
