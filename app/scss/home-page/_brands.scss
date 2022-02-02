@@ -1,17 +1,26 @@
 .brands {
+  padding: 68px 0;
+
   &__inner {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
   }
 
   &__image {
     cursor: pointer;
     opacity: 0.5;
+    object-fit: contain;
     transition: opacity 0.4s;
 
-    &:hover{
+    &:hover {
       opacity: 1;
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .brands {
+    padding-bottom: 20px;
   }
 }

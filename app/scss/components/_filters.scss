@@ -1,9 +1,12 @@
 .filters {
   display: flex;
   justify-content: center;
-  margin-bottom: 51px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
 
   &__item {
+    margin-bottom: 15px;
+
     &:not(:last-child) {
       margin-right: 30px;
     }
@@ -44,5 +47,17 @@
     bottom: -2px;
     left: 0;
     right: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .filters {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .filters {
+    margin-bottom: 9px;
   }
 }

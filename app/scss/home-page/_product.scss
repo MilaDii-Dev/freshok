@@ -1,4 +1,4 @@
-.product-top {
+.product {
   text-align: center;
   letter-spacing: 0.03em;
 }
@@ -58,6 +58,39 @@
 
     &--hit {
       background-color: $orange-900;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .product {
+    &__items {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &__item {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .product {
+    &__items {
+      grid-template-columns: 1fr 1fr;
+      max-width: 700px;
+      justify-content: center;
+      margin: 0 auto 48px;
+    }
+  }
+
+}
+
+@media (max-width: 600px) {
+  .product {
+    &__items {
+      gap: 5px;
+      margin-bottom: 27px;
     }
   }
 }

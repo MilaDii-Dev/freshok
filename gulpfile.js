@@ -27,7 +27,7 @@ function browsersync() {
 }
 
 function fileincludes() {
-  return src(['app/html/**/*.html'])
+  return src(['app/html/*.html'])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
@@ -86,7 +86,7 @@ function svgSprites() {
         },
       })
     )
-    .pipe(dest('app/images/sprite'));
+    .pipe(dest('app/images'));
 }
 
 function images() {
@@ -147,4 +147,4 @@ exports.build = series(cleandist, images, build);
 exports.svgSprites = svgSprites;
 exports.fileincludes = fileincludes;
 
-exports.default = parallel(svgSprites, styles, fileincludes, scripts, browsersync, watching);
+exports.default = parallel(fileincludes, svgSprites, styles, scripts, browsersync, watching);

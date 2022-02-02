@@ -14,20 +14,23 @@
   visibility: hidden;
   transition: opacity 0.4s;
 
-  &__item {
-    background-color: $white;
-    flex-direction: row;
-    height: auto;
+  &__article {
     margin: 0 12px 0 12px;
-    padding: 8px 12px 12px 12px;
-    align-items: center;
-    position: relative;
-    border: 1px solid $silver-600;
-    border-radius: 3px;
 
     &:not(:last-child) {
       margin-bottom: 12px;
     }
+  }
+
+  &__item {
+    background-color: $white;
+    flex-direction: row;
+    height: auto;
+    padding: 8px 25px 12px 12px;
+    align-items: center;
+    position: relative;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
   }
 
   &__icon {
@@ -45,8 +48,22 @@
   &__link {
     max-width: 190px;
     margin-bottom: 0;
-    padding: 3px 0 0 11px;
+    padding: 3px 0 0 40px;
     width: 100%;
+  }
+
+  &__box,
+  &__wrap {
+    display: flex;
+  }
+
+  &__box {
+    align-items: center;
+  }
+
+  &__wrap {
+    align-self: flex-end;
+    padding-right: 11px;
   }
 
   &__text {
@@ -57,7 +74,7 @@
   &__bottom {
     padding: 0;
     align-self: flex-end;
-    margin: 0 -30px 0 10px;
+    margin: 0 -30px 0 5px;
   }
 
   &__counter {
@@ -89,11 +106,17 @@
     font-weight: $fw-600;
     font-size: 20px;
     letter-spacing: 0.03em;
+
+    span {
+      font-size: 14px;
+    }
   }
 
   &__img {
     align-self: flex-start;
     margin: 0;
+    max-width: 60px;
+    width: 100%;
   }
 
   &__btn {
@@ -108,7 +131,6 @@
     }
 
     &:focus {
-      background-color: rgba($black, 0.0001);
       box-shadow: 0 0 0 3px $green-200;
     }
 
@@ -120,20 +142,19 @@
       align-self: flex-start;
       padding: 0;
       margin: 0;
-      position: relative;
+      position: absolute;
       width: 20px;
       height: 20px;
       z-index: 50;
-
-      transition: background-color 0.4s,
-        box-shadow 0.4s;
+      right: 2px;
+      top: 4px;
+      transition: background-color 0.4s, box-shadow 0.4s;
 
       &:hover {
         background-color: $green-100;
       }
 
       &:focus {
-        background-color: rgba($black, 0.0001);
         box-shadow: 0 0 0 3px $green-200;
       }
 
@@ -196,5 +217,40 @@
 
   &__unit {
     font-size: 14px;
+  }
+
+  .product-card__image {
+    object-fit: contain;
+  }
+
+  .product-card__img {
+    &::after {
+      content: none;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .cart {
+    max-width: 100%;
+
+    &__item{
+      flex-direction: column;
+    }
+
+    &__box{
+      align-self: flex-start;
+      margin-bottom: 18px;
+    }
+
+    &__wrap{
+      width: 100%;
+      justify-content: space-between;
+      padding-left: 30px;
+    }
+
+    &__link{
+      padding: 3px 0 0 12px;
+    }
   }
 }

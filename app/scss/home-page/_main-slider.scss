@@ -5,23 +5,21 @@
     justify-content: space-between;
   }
 
-  &__item {
+  &__inner {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     align-items: center;
-  }
-
-  &__inner{
     display: flex;
     align-items: center;
     height: 600px;
+    position: relative;
   }
 
   &__content {
     background-color: rgba($white, 0.8);
     border-radius: 4px;
-    padding: 20px 30px;
+    padding: 26px 30px;
     width: 100%;
     max-width: 1290px;
     margin: 0 auto;
@@ -36,6 +34,7 @@
     color: $dark-500;
     margin-bottom: 10px;
     max-width: 850px;
+    @include line-clamp(3);
   }
 
   &__span {
@@ -48,6 +47,7 @@
     font-size: 16px;
     margin-bottom: 30px;
     max-width: 850px;
+    @include line-clamp(3);
 
     p:not(:last-child) {
       margin-bottom: 10px;
@@ -127,6 +127,97 @@
 
     &--next {
       right: 45px;
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      background: $white;
+      border: 1px solid $silver-600;
+      border-radius: 50%;
+      font-size: 0;
+      width: 13px;
+      height: 13px;
+      padding: 0;
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+    }
+
+    .slick-active {
+      button {
+        background: $green-900;
+        border: 1px solid $green-900;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .main-slider {
+    &__title {
+      font-size: 35px;
+      max-width: 500px;
+    }
+
+    &__inner {
+      height: 450px;
+    }
+
+    &__text {
+      max-width: 450px;
+    }
+
+    &__link {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .main-slider {
+
+    .slick-dots {
+      bottom: 10px;
+
+      button {
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    &__content {
+      padding: 10px 7px;
+    }
+
+    &__inner {
+      height: 320px;
+    }
+
+    &__title {
+      font-size: 20px;
+      max-width: 300px;
+      margin-bottom: 18px;
+    }
+
+    &__text {
+      max-width: 350px;
+      margin-bottom: 24px;
+    }
+
+    &__link {
+      font-size: 14px;
     }
   }
 }

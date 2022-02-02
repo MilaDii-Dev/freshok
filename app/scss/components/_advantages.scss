@@ -4,9 +4,7 @@
 
   &__inner {
     display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 915px;
+    justify-content: center;
   }
 
   &__item {
@@ -16,6 +14,10 @@
     background-repeat: no-repeat;
     background-size: 50px;
     background-position: top left;
+
+    &:not(:last-child) {
+      margin-right: 70px;
+    }
   }
 
   &__subtitle {
@@ -29,6 +31,24 @@
 
     p:not(:last-child) {
       margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .advantages {
+    padding: 27px 0;
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__item {
+      max-width: 100%;
+      padding: 5px 0 5px 74px;
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 21px;
+      }
     }
   }
 }

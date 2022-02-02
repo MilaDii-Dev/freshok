@@ -149,6 +149,10 @@
     padding: 0 18px 0 18px;
   }
 
+  &__link{
+    @include line-clamp(3);
+  }
+
   &__prices {
     display: flex;
     flex-direction: column;
@@ -206,51 +210,79 @@
       border-radius: 3px;
     }
   }
-}
 
-.jq-number {
-  position: relative;
-  margin-right: 24px;
-  cursor: pointer;
-}
+  .jq-number {
+    position: relative;
+    margin-right: 24px;
+    cursor: pointer;
+  }
 
-.jq-number__spin {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 26px;
-  height: 26px;
-  background: $green-900;
-
-  &::after,
-  &::before {
-    width: 16px;
-    height: 2px;
-    background-color: $white;
-    content: "";
+  .jq-number__spin {
     position: absolute;
-    bottom: 11px;
-    right: 4px;
-  }
-
-  &.minus {
     top: 0;
-    left: -25px;
-    border-radius: 3px 0 0 3px;
+    bottom: 0;
+    width: 26px;
+    height: 26px;
+    background: $green-900;
+
+    &::after,
+    &::before {
+      width: 16px;
+      height: 2px;
+      background-color: $white;
+      content: "";
+      position: absolute;
+      bottom: 11px;
+      right: 4px;
+    }
+
+    &.minus {
+      top: 0;
+      left: -25px;
+      border-radius: 3px 0 0 3px;
+    }
+
+    &.plus {
+      right: -25px;
+      border-radius: 0 3px 3px 0;
+
+      &::before {
+        transform: rotate(90deg);
+      }
+    }
   }
 
-  &.plus {
-    right: -25px;
-    border-radius: 0 3px 3px 0;
-
-    &::before {
-      transform: rotate(90deg);
+  .jq-number__field {
+    input {
+      text-align: center;
     }
   }
 }
 
-.jq-number__field {
-  input{
-    text-align: center;
+
+@media (max-width: 600px) {
+  .product-card {
+    &__img {
+      max-width: 168px;
+      height: 128px;
+      margin: 0 auto 10px;
+    }
+
+    &__image {
+      object-fit: contain;
+    }
+
+    &__text {
+      padding: 0 12px 45px 12px;
+    }
+
+    &__bottom {
+      padding: 0 17px 12px 12px;
+    }
+
+    .jq-number{
+      margin-right: 15px;
+    }
   }
+
 }
