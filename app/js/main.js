@@ -81,18 +81,18 @@ $(function () {
         $('.catalog__menu').toggleClass('catalog__menu--active');
       });
     }
+
     var cart = $(".cart, .cart--active");
     if (!cart.is(e.target) // если клик был не по нашему блоку
       &&
       cart.has(e.target).length === 0) {
-      cart.removeClass('cart--active');
+      cart.removeClass('cart--active'); 
       $('body').removeClass('no-scroll');
       $('.cart__btn:not(.cart__btn--small)').on('click', function () {
         $('.cart').removeClass('cart--active');
         $('body').removeClass('no-scroll');
       });
     }
-
 
     var mobile = $(".menu-mobile, .menu-mobile--active");
     if (!mobile.is(e.target) // если клик был не по нашему блоку

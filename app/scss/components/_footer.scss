@@ -159,10 +159,8 @@
 
     &__items {
       margin: 0 auto;
-      padding: 24px 0;
-      column-count: 2;
+      padding: 24px 0 24px 30px;
       position: relative;
-      max-width: 350px;
 
       &::before,
       &::after {
@@ -203,13 +201,24 @@
   }
 }
 
-@media (max-width: 600px){
-  .footer{
-    &__top{
+
+
+@media (max-width: 860px) {
+  .footer {
+    &__items {
+      padding-left: 50px;
+      column-count: 2;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    &__top {
       padding-top: 0;
     }
 
-    &__bottom{
+    &__bottom {
       padding: 11px 0;
     }
   }

@@ -166,12 +166,10 @@
   .promo {
     &__items {
       grid-template-columns: repeat(2, 1fr);
-      max-width: 700px;
       margin: 0 auto 48px;
     }
 
     &__item {
-      max-width: 350px;
       margin: 0 auto;
     }
 
