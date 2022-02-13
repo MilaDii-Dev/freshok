@@ -14,7 +14,11 @@
   visibility: hidden;
   transition: opacity 0.4s;
 
-  &__article {
+  @include mq('phone') {
+    max-width: 100%;
+  }
+
+  &__item {
     margin: 0 12px 0 12px;
 
     &:not(:last-child) {
@@ -22,7 +26,7 @@
     }
   }
 
-  &__item {
+  .product-card {
     background-color: $white;
     flex-direction: row;
     height: auto;
@@ -31,6 +35,68 @@
     position: relative;
     border: 1px solid $silver-600;
     border-radius: 3px;
+
+    @include mq('phone') {
+      flex-direction: column;
+    }
+
+    .jq-number {
+      @include mq('phone') {
+        position: relative;
+        bottom: 0;
+      }
+    }
+
+    &__link {
+      max-width: 190px;
+      margin-bottom: 0;
+      padding: 3px 0 0 40px;
+      width: 100%;
+    }
+
+    &__title {
+      margin-bottom: 5px;
+      padding: 0;
+    }
+
+    &__bottom {
+      padding: 0;
+      align-self: flex-end;
+      margin: 0 -30px 0 5px;
+    }
+
+    &__counters {
+      z-index: 20;
+      opacity: 1;
+      visibility: visible;
+      align-self: flex-end;
+    }
+
+    &__price {
+      font-weight: $fw-600;
+      font-size: 20px;
+      letter-spacing: 0.03em;
+
+      span {
+        font-size: 14px;
+      }
+    }
+
+    &__img {
+      align-self: flex-start;
+      margin: 0;
+      max-width: 60px;
+      width: 100%;
+
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+
+    &__image {
+      object-fit: contain;
+    }
   }
 
   &__icon {
@@ -45,13 +111,6 @@
     }
   }
 
-  &__link {
-    max-width: 190px;
-    margin-bottom: 0;
-    padding: 3px 0 0 40px;
-    width: 100%;
-  }
-
   &__box,
   &__wrap {
     display: flex;
@@ -59,29 +118,22 @@
 
   &__box {
     align-items: center;
+
+    @include mq('phone') {
+      align-self: flex-start;
+      margin-bottom: 18px;
+    }
   }
 
   &__wrap {
     align-self: flex-end;
     padding-right: 11px;
-  }
 
-  &__text {
-    margin-bottom: 5px;
-    padding: 0;
-  }
-
-  &__bottom {
-    padding: 0;
-    align-self: flex-end;
-    margin: 0 -30px 0 5px;
-  }
-
-  &__counter {
-    z-index: 20;
-    opacity: 1;
-    visibility: visible;
-    align-self: flex-end;
+    @include mq('phone') {
+      width: 100%;
+      justify-content: space-between;
+      padding-left: 30px;
+    }
   }
 
   &--active {
@@ -96,27 +148,16 @@
     color: $black;
     font-weight: $fw-400;
     margin-bottom: 12px;
-  }
 
-  &__title--bottom {
-    margin-bottom: 0;
-  }
-
-  &__price {
-    font-weight: $fw-600;
-    font-size: 20px;
-    letter-spacing: 0.03em;
-
-    span {
-      font-size: 14px;
+    &--bottom {
+      margin-bottom: 0;
     }
   }
 
-  &__img {
-    align-self: flex-start;
-    margin: 0;
-    max-width: 60px;
-    width: 100%;
+  &__link {
+    @include mq('phone') {
+      padding: 3px 0 0 12px;
+    }
   }
 
   &__btn {
@@ -126,12 +167,12 @@
     border-radius: 3px;
     transition: background-color 0.4s, box-shadow 0.4s;
 
-    &:hover {
-      background-color: $green-100;
-    }
-
     &:focus {
       box-shadow: 0 0 0 3px $green-200;
+    }
+
+    &:hover {
+      background-color: $green-100;
     }
 
     &:active {
@@ -150,12 +191,12 @@
       top: 4px;
       transition: background-color 0.4s, box-shadow 0.4s;
 
-      &:hover {
-        background-color: $green-100;
-      }
-
       &:focus {
         box-shadow: 0 0 0 3px $green-200;
+      }
+
+      &:hover {
+        background-color: $green-100;
       }
 
       &:active {
@@ -192,6 +233,10 @@
 
   &__amount {
     font-size: 24px;
+
+    span {
+      font-size: 14px;
+    }
   }
 
   &__order {
@@ -212,45 +257,6 @@
     &:active {
       box-shadow: inset 0 4px 4px rgba($black, 0.25);
       color: rgba($white, 0.5);
-    }
-  }
-
-  &__unit {
-    font-size: 14px;
-  }
-
-  .product-card__image {
-    object-fit: contain;
-  }
-
-  .product-card__img {
-    &::after {
-      content: none;
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .cart {
-    max-width: 100%;
-
-    &__item{
-      flex-direction: column;
-    }
-
-    &__box{
-      align-self: flex-start;
-      margin-bottom: 18px;
-    }
-
-    &__wrap{
-      width: 100%;
-      justify-content: space-between;
-      padding-left: 30px;
-    }
-
-    &__link{
-      padding: 3px 0 0 12px;
     }
   }
 }

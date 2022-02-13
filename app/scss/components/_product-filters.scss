@@ -1,0 +1,69 @@
+.product-filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+
+  @include mq('desktop') {
+    margin-bottom: 20px;
+  }
+
+  @include mq('phone') {
+    margin-bottom: 9px;
+  }
+
+  &__item {
+    margin-bottom: 15px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    font-weight: $fw-700;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: $dark-500;
+    transition: color 0.4s, box-shadow 0.4s;
+    padding: 0;
+
+    &:focus {
+      box-shadow: 0 0 0 3px $green-200;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      color: $green-900;
+    }
+
+    &:active {
+      &::after {
+        @include pseudo;
+        width: 100%;
+        height: 3px;
+        background-color: rgba($green-900, 0.2);
+        bottom: -2px;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &::after {
+      transition: background-color 0.4s;
+    }
+  }
+
+  .mixitup-control-active {
+    &::after {
+      @include pseudo;
+      width: 100%;
+      height: 3px;
+      background-color: rgba($green-900, 0.2);
+      bottom: -2px;
+      left: 0;
+      right: 0;
+    }
+  }
+}

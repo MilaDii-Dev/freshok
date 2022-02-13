@@ -36,7 +36,7 @@ $(function () {
         }
       },
       {
-        breakpoint: 765,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2
@@ -47,14 +47,17 @@ $(function () {
 
   $('.user-nav__btn').on('click', function () {
     $('.cart').toggleClass('cart--active');
-    $('body').toggleClass('no-scroll');
+    $('.wrapper').toggleClass('no-scroll');
   });
 
-  $('.product-card__btn--cart').on('click', function () {
-    $('.product-card__counters').toggleClass('product-card__counters--active');
+  const productButtons = document.querySelectorAll('.product-card__btn--cart');
+  productButtons.forEach(item => {
+    item.addEventListener('click', () => {
+      item.previousElementSibling.classList.toggle('product-card__counters');
+    });
   });
 
-  var product = document.querySelector('[data-ref="product"]');
+  var products = document.querySelector('[data-ref="products"]');
   var promo = document.querySelector('[data-ref="promo"]');
 
   var config = {
@@ -63,21 +66,21 @@ $(function () {
     }
   };
 
-  var mixer1 = mixitup(product, config);
+  var mixer1 = mixitup(products, config);
   var mixer2 = mixitup(promo, config);
 
   $('input').styler();
 
 
   $(document).on('mouseup', function (e) { // событие клика по веб-документу
-    var div = $(".catalog__menu:not(.menu-mobile__button), .catalog__menu--active"); // тут указываем ID элемента
+    var div = $(".catalog__menu:not(.mobile-nav__button), .catalog__menu--active"); // тут указываем ID элемента
     if (!div.is(e.target) // если клик был не по нашему блоку
       &&
       div.has(e.target).length === 0) { // и не по его дочерним элементам
       div.removeClass('catalog__menu--active');
-      $('.button--catalog').removeClass('button--catalog--active');
-      $('.button--catalog').on('click', function () {
-        $('.button--catalog').toggleClass('button--catalog--active');
+      $('.catalog__button').removeClass('catalog__button--active');
+      $('.catalog__button').on('click', function () {
+        $('.catalog__button').toggleClass('catalog__button--active');
         $('.catalog__menu').toggleClass('catalog__menu--active');
       });
     }
@@ -86,27 +89,27 @@ $(function () {
     if (!cart.is(e.target) // если клик был не по нашему блоку
       &&
       cart.has(e.target).length === 0) {
-      cart.removeClass('cart--active'); 
-      $('body').removeClass('no-scroll');
+      cart.removeClass('cart--active');
+      $('.wrapper').removeClass('no-scroll');
       $('.cart__btn:not(.cart__btn--small)').on('click', function () {
         $('.cart').removeClass('cart--active');
-        $('body').removeClass('no-scroll');
+        $('.wrapper').removeClass('no-scroll');
       });
     }
 
-    var mobile = $(".menu-mobile, .menu-mobile--active");
+    var mobile = $(".mobile-nav, .mobile-nav--active");
     if (!mobile.is(e.target) // если клик был не по нашему блоку
       &&
       mobile.has(e.target).length === 0) {
-      mobile.removeClass('menu-mobile--active');
-      $('body').removeClass('no-scroll');
+      mobile.removeClass('mobile-nav--active');
+      $('.wrapper').removeClass('no-scroll');
       $('.burger').on('click', function () {
-        $('.menu-mobile').addClass('menu-mobile--active');
-        $('body').addClass('no-scroll');
+        $('.mobile-nav').addClass('mobile-nav--active');
+        $('.wrapper').addClass('no-scroll');
       });
-      $('.menu-mobile__btn').on('click', function () {
-        $('.menu-mobile').removeClass('menu-mobile--active');
-        $('body').removeClass('no-scroll');
+      $('.mobile-nav__btn').on('click', function () {
+        $('.mobile-nav').removeClass('mobile-nav--active');
+        $('.wrapper').removeClass('no-scroll');
       });
     }
   });

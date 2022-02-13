@@ -1,10 +1,21 @@
 .news {
   padding-bottom: 72px;
 
+  @include mq('phone') {
+    padding-bottom: 26px;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mq('phone') {
+      margin-bottom: 24px;
+      display: block;
+      flex-direction: column;
+      justify-content: start;
+    }
   }
 
   &__link {
@@ -15,15 +26,15 @@
     border-bottom: 2px solid $green-900;
     transition: color 0.4s, box-shadow 0.4s, border-bottom 0.4s;
 
-    &:hover {
-      color: $green-1000;
-      border-bottom: 2px solid $green-1000;
-    }
-
     &:focus {
       box-shadow: 0 0 0 3px $green-200;
       border-radius: 3px;
       border-bottom: 2px solid transparent;
+    }
+
+    &:hover {
+      color: $green-1000;
+      border-bottom: 2px solid $green-1000;
     }
 
     &:active {
@@ -31,20 +42,17 @@
     }
   }
 
-  &__box {
-    display: block;
-
-    &:hover {
-      .news__text {
-        color: $green-900;
-      }
-    }
-  }
-
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mq('tablet-2') {
+      flex-wrap: wrap;
+      max-width: 700px;
+      margin: 0 auto;
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -55,27 +63,23 @@
     border-radius: 6px;
     min-height: 348px;
 
-    :not(:last-child) {
-      margin-right: 30px;
+    @include mq('tablet-2') {
+      max-width: 90%;
+      margin: 10px;
+    }
+
+    @include mq('phone') {
+      min-height: 100%;
+      margin: 0 0 15px 0;
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
     }
   }
+}
 
-  &__img {
-    object-fit: cover;
-    height: 240px;
-    width: 100%;
-    border-radius: 6px 6px 0 0;
-  }
-
-  &__text {
-    font-weight: $fw-600;
-    font-size: 16px;
-    line-height: 1.5;
-    padding: 18px 18px 0 18px;
-    @include line-clamp(3);
-    transition: color 0.4s;
-  }
-
+.news-card {
   &__date {
     position: absolute;
     width: 65px;
@@ -99,58 +103,41 @@
     font-size: 30px;
     line-height: 1;
   }
-}
 
-@media (max-width: 1350px) {
-  .news {
-    &__inner {
-      flex-wrap: wrap;
-    }
+  &__img {
+    object-fit: cover;
+    height: 240px;
+    width: 100%;
+    border-radius: 6px 6px 0 0;
 
-    &__item {
-      max-width: 45%;
-      margin: 20px;
+    @include mq('phone') {
+      height: 200px;
     }
   }
-}
 
-@media (max-width: 860px) {
-  .news {
-    &__inner {
-      max-width: 700px;
-      margin: 0 auto;
-      justify-content: center;
-    }
+  &__text {
+    font-weight: $fw-600;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 18px 18px 0 18px;
+    @include line-clamp(3);
+    transition: color 0.4s;
 
-    &__item {
-      max-width: 100%;
-      margin: 10px;
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .news {
-    padding-bottom: 26px;
-    &__top {
-      margin-bottom: 24px;
-      display: block;
-      flex-direction: column;
-      justify-content: start;
-    }
-
-    &__item {
-      min-height: 100%;
-      margin: 0 0 15px 0;
-    }
-
-    &__text {
+    @include mq('phone') {
       font-size: 14px;
       padding: 13px 0px 16px 9px;
     }
+  }
 
-    &__img {
-      height: 200px;
+  &__box {
+    display: block;
+
+    &:hover {
+      .news {
+        &__text {
+          color: $green-900;
+        }
+      }
     }
   }
 }

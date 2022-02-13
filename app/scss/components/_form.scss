@@ -1,0 +1,132 @@
+.form-subscribe {
+  max-width: 315px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+
+  @include mq('desktop') {
+    margin: 0 auto;
+    padding: 24px 0;
+  }
+
+  @include mq('phone') {
+    padding: 6px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    max-width: 305px;
+  }
+
+  &__label {
+    margin-bottom: 18px;
+    line-height: 1;
+    display: block;
+  }
+
+  &__field {
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px 0 0 6px;
+    transition: box-shadow 0.4s, background-color 0.3s;
+
+    &::placeholder {
+      line-height: 1;
+      color: $silver-900;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $green-200;
+    }
+
+    &:hover {
+      background-color: $green-100;
+    }
+
+    &:active {
+      box-shadow: inset 0 4px 4px rgba($black, 0.25);
+    }
+  }
+}
+
+.form-search {
+  max-width: 576px;
+  width: 100%;
+  display: flex;
+  margin-right: 45px;
+
+  @include mq('desktop') {
+    display: none;
+  }
+
+  &__field {
+    padding: 15px 52px;
+    max-width: 420px;
+    width: 100%;
+    border-radius: 6px 0 0 6px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-image: url('../images/search.svg');
+    background-position: 15px 15px;
+    transition: box-shadow 0.4s, background-color 0.3s;
+
+    &:focus {
+      box-shadow: 0 0 0 3px $green-200;
+    }
+
+    &:hover {
+      background-color: $green-100;
+    }
+
+    &:active {
+      box-shadow: inset 0 4px 4px rgba($black, 0.25);
+    }
+
+    &::placeholder {
+      color: $dark-800;
+      font-weight: $fw-400;
+      font-family: $opensans;
+    }
+  }
+}
+
+.form {
+  &__mobile {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    z-index: 30;
+    right: 0;
+    margin-right: 0;
+    max-width: 100%;
+    border: 1px solid $dark-800;
+
+    @include mq('desktop') {
+      transition: opacity 0.4s;
+      display: flex;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &--active {
+      @include mq('desktop') {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .form-search {
+      &__field {
+        max-width: 100%;
+        border-radius: 0;
+      }
+    }
+
+    .button {
+      &--radius {
+        border-radius: 0;
+      }
+    }
+  }
+}

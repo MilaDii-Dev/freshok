@@ -2,9 +2,17 @@
   padding: 48px 0 30px;
   background-color: $silver-100;
 
+  @include mq('tablet-2') {
+    padding: 27px 0;
+  }
+
   &__inner {
     display: flex;
     justify-content: center;
+
+    @include mq('tablet-2') {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -15,8 +23,18 @@
     background-size: 50px;
     background-position: top left;
 
+    @include mq('tablet-2') {
+      max-width: 100%;
+      padding: 5px 0 5px 74px;
+    }
+
     &:not(:last-child) {
       margin-right: 70px;
+
+      @include mq('tablet-2') {
+        margin-right: 0;
+        margin-bottom: 21px;
+      }
     }
   }
 
@@ -31,24 +49,6 @@
 
     p:not(:last-child) {
       margin-bottom: 10px;
-    }
-  }
-}
-
-@media (max-width: 992px) {
-  .advantages {
-    padding: 27px 0;
-    &__inner {
-      flex-direction: column;
-    }
-
-    &__item {
-      max-width: 100%;
-      padding: 5px 0 5px 74px;
-      &:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 21px;
-      }
     }
   }
 }

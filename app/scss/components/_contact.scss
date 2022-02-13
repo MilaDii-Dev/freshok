@@ -1,4 +1,9 @@
 .contact {
+
+   @include mq('desktop') {
+    padding: 24px 0;
+  }
+
   &__item {
     margin-bottom: 18px;
   }
@@ -17,11 +22,5 @@
     &:active {
       opacity: 0.5;
     }
-  }
-}
-
-@media (max-width: 1200px){
-  .contacts{
-    padding: 24px 0;
   }
 }

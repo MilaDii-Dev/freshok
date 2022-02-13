@@ -1,54 +1,53 @@
-      <section class="product section">
+      <section class="products section">
         <div class="container">
-          <div class="top__inner" data-ref="product">
+          <div class="top__inner" data-ref="products">
             <h2 class="title">Топовые товары</h2>
-            <ul class="filters">
-              <li class="filters__item">
-                <button class="filters__btn filters__btn--active" type="button" data-filter="all">Все товары</button>
+            <ul class="product-filters">
+              <li class="product-filters__item">
+                <button class="product-filters__btn" type="button" data-filter="all">Все товары</button>
               </li>
-              <li class="filters__item">
-                <button class="filters__btn" type="button" data-filter=".category-fruit">Фрукты</button>
+              <li class="product-filters__item">
+                <button class="product-filters__btn" type="button" data-filter=".category-fruit">Фрукты</button>
               </li>
-              <li class="filters__item">
-                <button class="filters__btn" type="button" data-filter=".category-vegetables">овощи</button>
+              <li class="product-filters__item">
+                <button class="product-filters__btn" type="button" data-filter=".category-vegetables">овощи</button>
               </li>
-              <li class="filters__item">
-                <button class="filters__btn" type="button" data-filter=".category-drinks">Напитки</button>
+              <li class="product-filters__item">
+                <button class="product-filters__btn" type="button" data-filter=".category-drinks">Напитки</button>
               </li>
-              <li class="filters__item">
-                <button class="filters__btn" type="button" data-filter=".category-grocery">бакалея</button>
+              <li class="product-filters__item">
+                <button class="product-filters__btn" type="button" data-filter=".category-grocery">бакалея</button>
               </li>
             </ul>
-            <ul class="product__items">
-              <li class="product__item mix category-fruit">
+            <ul class="products__items">
+              <li class="products__item mix category-fruit">
                 <article class="product-card">
                   <div class="product-card__inner">
                     <ul class="badge">
-                      <li class="badge__list">
-                        <span class="badge__item badge__item--news">НОВИНКА</span>
+                      <li class="badge__item">
+                        <span class="badge__name badge__name--news">новинка</span>
                       </li>
-                      <li class="badge__list">
-                        <span class="badge__item badge__item--sale">-50%</span>
+                      <li class="badge__item">
+                        <span class="badge__name badge__name--sale">-50%</span>
                       </li>
                     </ul>
-                    <button class="product-card__btn product-card__btn--heart" type="button">
+                    <button class="product-card__btn product-card__btn--favourite" type="button">
                       <span class="sr-only">Добавить в понравившиеся товары</span>
-                      <svg class="product-card__icon product-card__icon--heart">
-                        <use xlink:href="images/sprite.svg#heart-product"></use>
+                      <svg class="product-card__icon product-card__icon--favourite">
+                        <use xlink:href="images/sprite.svg#favourite-product"></use>
                       </svg>
                     </button>
                   </div>
                   <a class="product-card__img" href="#">
                     <img class="product-card__image" src="images/product-card/ananas.jpg" alt="Ананас, 1кг" width="300" height="225">
-                    <span class="product-card__search" style="background-image: url('images/icon/icon-search.svg')"></span>
                   </a>
-                  <h3 class="product-card__text">
-                    <a class="product-card__link" href="#">Ананас, 1кг</a>
+                  <h3 class="product-card__title">
+                    <a href="#">Ананас, 1кг</a>
                   </h3>
                   <div class="product-card__bottom">
                     <div class="product-card__prices">
-                      <p class="product-card__price product-card__price--old">1999 ₽</p>
-                      <p class="product-card__price">999 ₽</p>
+                      <span class="product-card__price product-card__price--old">1999<span>₽</span></span>
+                      <span class="product-card__price">999<span>₽</span></span>
                     </div>
                     <div class="product-card__box">
                       <div class="product-card__counters">
@@ -64,26 +63,25 @@
                   </div>
                 </article>
               </li>
-              <li class="product__item mix category-fruit">
+              <li class="products__item mix category-fruit">
                 <article class="product-card">
                   <div class="product-card__inner">
-                    <button class="product-card__btn product-card__btn--heart" type="button">
+                    <button class="product-card__btn product-card__btn--favourite" type="button">
                       <span class="sr-only">Добавить в понравившиеся товары</span>
-                      <svg class="product-card__icon product-card__icon--heart">
-                        <use xlink:href="images/sprite.svg#heart-product"></use>
+                      <svg class="product-card__icon product-card__icon--favourite">
+                        <use xlink:href="images/sprite.svg#favourite-product"></use>
                       </svg>
                     </button>
                   </div>
                   <a class="product-card__img" href="#">
                     <img class="product-card__image" src="images/product-card/lemon.jpg" alt="Лимон, 1кг" width="300" height="225">
-                    <span class="product-card__search" style="background-image: url('images/icon/icon-search.svg')"></span>
                   </a>
-                  <h3 class="product-card__text">
-                    <a class="product-card__link" href="#">Лимон, 1кг</a>
+                  <h3 class="product-card__title">
+                    <a href="#">Лимон, 1кг</a>
                   </h3>
                   <div class="product-card__bottom">
                     <div class="product-card__prices">
-                      <p class="product-card__price">199 ₽</p>
+                      <span class="product-card__price">199<span>₽</span></span>
                     </div>
                     <div class="product-card__box">
                       <div class="product-card__counters">
@@ -99,31 +97,30 @@
                   </div>
                 </article>
               </li>
-              <li class="product__item mix category-fruit">
+              <li class="products__item mix category-fruit">
                 <article class="product-card">
                   <div class="product-card__inner">
                     <ul class="badge">
-                      <li class="badge__list">
-                        <span class="badge__item badge__item--hit">ХИТ</span>
+                      <li class="badge__item">
+                        <span class="badge__name badge__name--hit">хит</span>
                       </li>
                     </ul>
-                    <button class="product-card__btn product-card__btn--heart" type="button">
+                    <button class="product-card__btn product-card__btn--favourite" type="button">
                       <span class="sr-only">Добавить в понравившиеся товары</span>
-                      <svg class="product-card__icon product-card__icon--heart">
-                        <use xlink:href="images/sprite.svg#heart-product"></use>
+                      <svg class="product-card__icon product-card__icon--favourite">
+                        <use xlink:href="images/sprite.svg#favourite-product"></use>
                       </svg>
                     </button>
                   </div>
                   <a class="product-card__img" href="#">
                     <img class="product-card__image" src="images/product-card/dragon.jpg" alt="Питахайя красная с белой мякотью, 1шт" width="300" height="225">
-                    <span class="product-card__search" style="background-image: url('images/icon/icon-search.svg')"></span>
                   </a>
-                  <h3 class="product-card__text">
-                    <a class="product-card__link" href="#">Питахайя красная с белой мякотью, 1шт</a>
+                  <h3 class="product-card__title">
+                    <a href="#">Питахайя красная с белой мякотью, 1шт</a>
                   </h3>
                   <div class="product-card__bottom">
                     <div class="product-card__prices">
-                      <p class="product-card__price">1019 ₽</p>
+                      <span class="product-card__price">1019<span>₽</span></span>
                     </div>
                     <div class="product-card__box">
                       <div class="product-card__counters">
@@ -139,26 +136,25 @@
                   </div>
                 </article>
               </li>
-              <li class="product__item mix category-grocery">
+              <li class="products__item mix category-grocery">
                 <article class="product-card">
                   <div class="product-card__inner">
-                    <button class="product-card__btn product-card__btn--heart" type="button">
+                    <button class="product-card__btn product-card__btn--favourite" type="button">
                       <span class="sr-only">Добавить в понравившиеся товары</span>
-                      <svg class="product-card__icon product-card__icon--heart">
-                        <use xlink:href="images/sprite.svg#heart-product"></use>
+                      <svg class="product-card__icon product-card__icon--favourite">
+                        <use xlink:href="images/sprite.svg#favourite-product"></use>
                       </svg>
                     </button>
                   </div>
                   <a class="product-card__img" href="#">
                     <img class="product-card__image" src="images/product-card/ketchup.jpg" alt="Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт" width="300" height="225">
-                    <span class="product-card__search" style="background-image: url('images/icon/icon-search.svg')"></span>
                   </a>
-                  <h3 class="product-card__text">
-                    <a class="product-card__link" href="#">Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт</a>
+                  <h3 class="product-card__title">
+                    <a href="#">Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт</a>
                   </h3>
                   <div class="product-card__bottom">
                     <div class="product-card__prices">
-                      <p class="product-card__price">600 ₽</p>
+                      <span class="product-card__price">600<span>₽</span></span>
                     </div>
                     <div class="product-card__box">
                       <div class="product-card__counters">
@@ -174,31 +170,30 @@
                   </div>
                 </article>
               </li>
-              <li class="product__item mix category-vegetables">
+              <li class="products__item mix category-vegetables">
                 <article class="product-card">
                   <div class="product-card__inner">
                     <ul class="badge">
-                      <li class="badge__list">
-                        <span class="badge__item badge__item--hit">ХИТ</span>
+                      <li class="badge__item">
+                        <span class="badge__name badge__name--hit">хит</span>
                       </li>
                     </ul>
-                    <button class="product-card__btn product-card__btn--heart" type="button">
+                    <button class="product-card__btn product-card__btn--favourite" type="button">
                       <span class="sr-only">Добавить в понравившиеся товары</span>
-                      <svg class="product-card__icon product-card__icon--heart">
-                        <use xlink:href="images/sprite.svg#heart-product"></use>
+                      <svg class="product-card__icon product-card__icon--favourite">
+                        <use xlink:href="images/sprite.svg#favourite-product"></use>
                       </svg>
                     </button>
                   </div>
                   <a class="product-card__img" href="#">
                     <img class="product-card__image" src="images/product-card/carrot.jpg" alt="Морковь молодая с бабушкиной грядки, 1кг" width="300" height="225">
-                    <span class="product-card__search" style="background-image: url('images/icon/icon-search.svg')"></span>
                   </a>
-                  <h3 class="product-card__text">
-                    <a class="product-card__link" href="#">Морковь молодая с бабушкиной грядки, 1кг</a>
+                  <h3 class="product-card__title">
+                    <a href="#">Морковь молодая с бабушкиной грядки, 1кг</a>
                   </h3>
                   <div class="product-card__bottom">
                     <div class="product-card__prices">
-                      <p class="product-card__price">49 ₽</p>
+                      <span class="product-card__price">49<span>₽</span></span>
                     </div>
                     <div class="product-card__box">
                       <div class="product-card__counters">
@@ -214,32 +209,31 @@
                   </div>
                 </article>
               </li>
-              <li class="product__item mix category-drinks">
+              <li class="products__item mix category-drinks">
                 <article class="product-card">
                   <div class="product-card__inner">
                     <ul class="badge">
-                      <li class="badge__list">
-                        <span class="badge__item badge__item--sale">-50%</span>
+                      <li class="badge__item">
+                        <span class="badge__name badge__name--sale">-50%</span>
                       </li>
                     </ul>
-                    <button class="product-card__btn product-card__btn--heart" type="button">
+                    <button class="product-card__btn product-card__btn--favourite" type="button">
                       <span class="sr-only">Добавить в понравившиеся товары</span>
-                      <svg class="product-card__icon product-card__icon--heart">
-                        <use xlink:href="images/sprite.svg#heart-product"></use>
+                      <svg class="product-card__icon product-card__icon--favourite">
+                        <use xlink:href="images/sprite.svg#favourite-product"></use>
                       </svg>
                     </button>
                   </div>
                   <a class="product-card__img" href="#">
                     <img class="product-card__image" src="images/product-card/juice.jpg" alt="Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн..." width="300" height="225">
-                    <span class="product-card__search" style="background-image: url('images/icon/icon-search.svg')"></span>
                   </a>
-                  <h3 class="product-card__text">
-                    <a class="product-card__link" href="#">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...</a>
+                  <h3 class="product-card__title">
+                    <a href="#">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...</a>
                   </h3>
                   <div class="product-card__bottom">
                     <div class="product-card__prices">
-                      <p class="product-card__price product-card__price--old">299 ₽</p>
-                      <p class="product-card__price">199 ₽</p>
+                      <span class="product-card__price product-card__price--old">299<span>₽</span></span>
+                      <span class="product-card__price">199<span>₽</span></span>
                     </div>
                     <div class="product-card__box">
                       <div class="product-card__counters">
@@ -255,31 +249,30 @@
                   </div>
                 </article>
               </li>
-              <li class="product__item mix category-drinks">
+              <li class="products__item mix category-drinks">
                 <article class="product-card">
                   <div class="product-card__inner">
                     <ul class="badge">
-                      <li class="badge__list">
-                        <span class="badge__item badge__item--news">НОВИНКА</span>
+                      <li class="badge__item">
+                        <span class="badge__name badge__name--news">новинка</span>
                       </li>
                     </ul>
-                    <button class="product-card__btn product-card__btn--heart" type="button">
+                    <button class="product-card__btn product-card__btn--favourite" type="button">
                       <span class="sr-only">Добавить в понравившиеся товары</span>
-                      <svg class="product-card__icon product-card__icon--heart">
-                        <use xlink:href="images/sprite.svg#heart-product"></use>
+                      <svg class="product-card__icon product-card__icon--favourite">
+                        <use xlink:href="images/sprite.svg#favourite-product"></use>
                       </svg>
                     </button>
                   </div>
                   <a class="product-card__img" href="#">
                     <img class="product-card__image" src="images/product-card/coffee.jpg" alt="Кофе с коноплей органический Caffé Salomoni 250г" width="300" height="225">
-                    <span class="product-card__search" style="background-image: url('images/icon/icon-search.svg')"></span>
                   </a>
-                  <h3 class="product-card__text">
-                    <a class="product-card__link" href="#">Кофе с коноплей органический Caffé Salomoni 250г</a>
+                  <h3 class="product-card__title">
+                    <a href="#">Кофе с коноплей органический Caffé Salomoni 250г</a>
                   </h3>
                   <div class="product-card__bottom">
                     <div class="product-card__prices">
-                      <p class="product-card__price">877 ₽</p>
+                      <span class="product-card__price">877<span>₽</span></span>
                     </div>
                     <div class="product-card__box">
                       <div class="product-card__counters">
@@ -295,31 +288,30 @@
                   </div>
                 </article>
               </li>
-              <li class="product__item mix category-vegetables">
+              <li class="products__item mix category-vegetables">
                 <article class="product-card">
                   <div class="product-card__inner">
                     <ul class="badge">
-                      <li class="badge__list">
-                        <span class="badge__item badge__item--news">НОВИНКА</span>
+                      <li class="badge__item">
+                        <span class="badge__name badge__name--news">новинка</span>
                       </li>
                     </ul>
-                    <button class="product-card__btn product-card__btn--heart" type="button">
+                    <button class="product-card__btn product-card__btn--favourite" type="button">
                       <span class="sr-only">Добавить в понравившиеся товары</span>
-                      <svg class="product-card__icon product-card__icon--heart">
-                        <use xlink:href="images/sprite.svg#heart-product"></use>
+                      <svg class="product-card__icon product-card__icon--favourite">
+                        <use xlink:href="images/sprite.svg#favourite-product"></use>
                       </svg>
                     </button>
                   </div>
                   <a class="product-card__img" href="#">
                     <img class="product-card__image" src="images/product-card/paprik.jpg" alt="Перец оранжевый, 1кг" width="300" height="225">
-                    <span class="product-card__search" style="background-image: url('images/icon/icon-search.svg')"></span>
                   </a>
-                  <h3 class="product-card__text">
-                    <a class="product-card__link" href="#">Перец оранжевый, 1кг</a>
+                  <h3 class="product-card__title">
+                    <a href="#">Перец оранжевый, 1кг</a>
                   </h3>
                   <div class="product-card__bottom">
                     <div class="product-card__prices">
-                      <p class="product-card__price">349 ₽</p>
+                      <span class="product-card__price">349<span>₽</span></span>
                     </div>
                     <div class="product-card__box">
                       <div class="product-card__counters">

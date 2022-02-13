@@ -14,6 +14,14 @@
     align-items: center;
     height: 600px;
     position: relative;
+
+    @include mq('tablet-2') {
+      height: 450px;
+    }
+
+    @include mq('tablet') {
+      height: 320px;
+    }
   }
 
   &__content {
@@ -23,6 +31,10 @@
     width: 100%;
     max-width: 1290px;
     margin: 0 auto;
+
+    @include mq('tablet') {
+      padding: 10px 7px;
+    }
   }
 
   &__title {
@@ -35,6 +47,17 @@
     margin-bottom: 10px;
     max-width: 850px;
     @include line-clamp(3);
+
+    @include mq('tablet-2') {
+      font-size: 35px;
+      max-width: 500px;
+    }
+
+    @include mq('tablet') {
+      font-size: 20px;
+      max-width: 300px;
+      margin-bottom: 18px;
+    }
   }
 
   &__span {
@@ -49,14 +72,33 @@
     max-width: 850px;
     @include line-clamp(3);
 
-    p:not(:last-child) {
-      margin-bottom: 10px;
+    @include mq('tablet-2') {
+      max-width: 450px;
+    }
+
+    @include mq('tablet') {
+      max-width: 350px;
+      margin-bottom: 24px;
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
     }
   }
 
   &__link {
     border-radius: 6px;
     transition: background-color 0.3s, box-shadow 0.4s, color 0.3s;
+
+    @include mq('tablet-2') {
+      font-size: 16px;
+    }
+
+    @include mq('tablet') {
+      font-size: 14px;
+    }
 
     &:focus {
       box-shadow: 0 0 0 4px $green-200;
@@ -88,24 +130,30 @@
     &:focus {
       box-shadow: 0 0 0 3px rgba($green-900, 0.5);
 
-      .arrow__image {
-        fill: $silver-800;
+      .arrow {
+        &__image {
+          fill: $silver-800;
+        }
       }
     }
 
     &:hover {
       background-color: $green-200;
 
-      .arrow__image {
-        fill: $green-900;
+      .arrow {
+        &__image {
+          fill: $green-900;
+        }
       }
     }
 
     &:active {
       background-color: $silver-200;
 
-      .arrow__image {
-        fill: $green-900;
+      .arrow {
+        &__image {
+          fill: $green-900;
+        }
       }
     }
 
@@ -139,6 +187,10 @@
     justify-content: center;
     align-items: center;
 
+    @include mq('tablet') {
+      bottom: 10px;
+    }
+
     button {
       background: $white;
       border: 1px solid $silver-600;
@@ -147,6 +199,11 @@
       width: 13px;
       height: 13px;
       padding: 0;
+
+      @include mq('tablet') {
+        width: 10px;
+        height: 10px;
+      }
     }
 
     li {
@@ -160,64 +217,6 @@
         background: $green-900;
         border: 1px solid $green-900;
       }
-    }
-  }
-}
-
-@media (max-width: 992px) {
-  .main-slider {
-    &__title {
-      font-size: 35px;
-      max-width: 500px;
-    }
-
-    &__inner {
-      height: 450px;
-    }
-
-    &__text {
-      max-width: 450px;
-    }
-
-    &__link {
-      font-size: 16px;
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .main-slider {
-
-    .slick-dots {
-      bottom: 10px;
-
-      button {
-        width: 10px;
-        height: 10px;
-      }
-    }
-
-    &__content {
-      padding: 10px 7px;
-    }
-
-    &__inner {
-      height: 320px;
-    }
-
-    &__title {
-      font-size: 20px;
-      max-width: 300px;
-      margin-bottom: 18px;
-    }
-
-    &__text {
-      max-width: 350px;
-      margin-bottom: 24px;
-    }
-
-    &__link {
-      font-size: 14px;
     }
   }
 }

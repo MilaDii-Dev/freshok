@@ -9,200 +9,126 @@
     row-gap: 27px;
     column-gap: 32px;
     margin-bottom: 48px;
-  }
 
-  &__title {
-    margin-bottom: 35px;
+    @include mq('desktop') {
+      grid-template-columns: repeat(3, 1fr);
+      margin: 0 auto 48px;
+      column-gap: 15px;
+    }
+
+    @include mq('tablet-2') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq('phone') {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 15px;
+      margin: 0 auto 26px;
+    }
   }
 
   &__item {
     background-color: $white;
     padding: 15px 30px 0 0;
     min-height: 124px;
-  }
-
-  &__filter {
-    &:not(:last-child) {
-      margin-right: 37px;
-    }
-  }
-
-  &__box {
+    border: 1px solid rgba($dark-1000, 0.2);
+    border-radius: 6px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 11px;
+    justify-content: flex-end;
+    max-width: 300px;
     width: 100%;
-  }
-
-  &__wrap {
-    left: -9px;
-  }
-
-  &__card {
-    flex-direction: row;
-    padding-top: 0;
-    justify-content: flex-start;
-  }
-
-  &__badge {
-    padding-left: 25px;
-    z-index: 20;
-  }
-
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__img {
-    width: 220px;
-    margin-right: 5px;
-  }
-
-  .product-card__prices {
-    flex-direction: row;
-  }
-
-  &__rating {
     position: relative;
-    color: $dark-500;
-    font-weight: $fw-600;
-    line-height: 1;
-    letter-spacing: 0.03em;
-    align-self: flex-end;
+    transition: border 0.4s;
 
-    &::after {
-      position: absolute;
-      content: "";
-      mask-image: url('../images/sprite.svg#star');
-      width: 16px;
-      height: 16px;
-      background-color: $yellow-900;
-      mask-position: center;
-      mask-size: cover;
-      left: 25px;
-      top: -3px;
-    }
-  }
-
-  &__bottom {
-    flex-direction: column;
-    margin-top: auto;
-    padding: 0;
-  }
-
-  &__text {
-    padding: 0;
-    z-index: 25;
-    width: 100%;
-    transition: color 0.4s;
-
-    &:hover {
-      color: $green-900;
-    }
-  }
-
-  &__availability {
-    color: $green-900;
-    text-transform: uppercase;
-    line-height: 1;
-    font-size: 10px;
-    font-weight: $fw-600;
-    letter-spacing: 0.03em;
-    margin-bottom: 5px;
-
-    &--end {
-      color: $red-900;
-    }
-
-    &--not {
-      color: $silver-600;
-    }
-  }
-
-  .product-card__price {
-    font-size: 20px;
-    font-weight: $fw-600;
-    margin-right: 13px;
-
-    &--old {
-      font-size: 12px;
-      font-weight: $fw-400;
-      align-self: flex-end;
-    }
-  }
-
-  &__currency {
-    font-size: 14px;
-  }
-
-  .product-card__img {
-    &::after {
-      content: none;
-    }
-  }
-
-  .product-card__image {
-    object-fit: contain;
-  }
-}
-
-@media (max-width:1350px) {
-  .promo {
-    &__items {
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: 15px;
-    }
-
-    &__item {
-      max-width: 90%;
-    }
-  }
-}
-
-
-@media (max-width:1200px) {
-  .promo {
-    &__items {
-      grid-template-columns: repeat(2, 1fr);
-      margin: 0 auto 48px;
-    }
-
-    &__item {
+    @include mq('desktop') {
       margin: 0 auto;
+      max-width: 100%;
     }
 
-    &__img {
-      width: 120px;
-    }
-  }
-}
-
-@media (max-width:600px) {
-  .promo {
-    &__title {
-      margin-bottom: 25px;
-    }
-
-    &__items {
-      grid-template-columns: repeat(1, 1fr);
-      row-gap: 15px;
-      margin: 0 auto 26px;
-    }
-
-    &__item {
+    @include mq('phone') {
       max-width: 300px;
       max-height: 124px;
       height: 100%;
     }
 
+    &:hover {
+      border: 1px solid $green-900;
+    }
+  }
+
+  .badge {
+    z-index: 20;
+    position: absolute;
+    left: 19px;
+    top: -4px;
+  }
+
+  .product-card {
+    flex-direction: row;
+    padding-top: 0;
+    justify-content: flex-start;
+
     &__img {
-      width: 200px;
+      width: 220px;
+      margin-right: 5px;
     }
 
-    .product-card__img{
-      height: 100px;
+    &__prices {
+      flex-direction: row;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      margin-top: auto;
+      padding: 0;
+    }
+
+    &__title {
+      padding: 0;
+      z-index: 25;
+      width: 100%;
+    }
+
+    &__price {
+      font-size: 20px;
+      font-weight: $fw-600;
+      margin-right: 13px;
+
+      span {
+        font-size: 14px;
+      }
+
+      &--old {
+        font-size: 12px;
+        font-weight: $fw-400;
+        align-self: center;
+
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &__img {
+
+      @include mq('desktop') {
+        width: 120px;
+      }
+
+      @include mq('phone') {
+        width: 200px;
+        height: 100px;
+      }
+
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+
+    &__image {
+      object-fit: contain;
     }
   }
 }

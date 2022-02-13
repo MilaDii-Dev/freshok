@@ -1,4 +1,5 @@
 //Глобальные
+@import 'mixin';
 @import 'reset';
 @import 'fonts';
 @import 'vars';
@@ -6,16 +7,18 @@
 @import 'libs';
 //Компоненты
 @import 'components/_header.scss';
+@import 'components/_header-mobile.scss';
 @import 'components/_product-card.scss';
 @import 'components/_cart.scss';
-@import 'components/_filters.scss';
+@import 'components/_product-filters.scss';
 @import 'components/_advantages.scss';
 @import 'components/_footer.scss';
 @import 'components/_social.scss';
 @import 'components/_contact.scss';
+@import 'components/_form.scss';
 //Главная страница
 @import 'home-page/_main-slider.scss';
-@import 'home-page/_product.scss';
+@import 'home-page/_products.scss';
 @import 'home-page/_banners.scss';
 @import 'home-page/_promo.scss';
 @import 'home-page/_brands.scss';

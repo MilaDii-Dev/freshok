@@ -1,14 +1,14 @@
     <footer class="footer">
       <div class="container">
         <a class="logo footer__logo" href="#">
-          <img src="images/logo.svg" alt="логотип" width="200" height="60">
+          <img class="logo__img" src="images/logo.svg" alt="логотип" width="200" height="60">
         </a>
         <div class="footer__top">
           <form class="form-subscribe" action="#">
             <label class="form-subscribe__label" for="email">Следите за нашими акциями</label>
             <div class="form-subscribe__wrapper">
               <input class="form-subscribe__field" type="text" placeholder="email@email.com" name="email" id="email" required>
-              <button class="button button--subscribe" type="submit">подписаться</button>
+              <button class="button button--radius" type="submit">подписаться</button>
             </div>
           </form>
           <ul class="footer__items">
@@ -37,8 +37,8 @@
               <a class="footer__link" href="#">Новости</a>
             </li>
           </ul>
-          <adress class="contacts">
-            <ul class="contact">
+          <div class="contact"> <!-- переиспользую в меню при адаптиве -->
+            <ul class="contact__inner">
               <li class="contact__item">
                 <a class="contact__link" href="tel:907288365">Горячая линия +7 907 288 365</a>
               </li>
@@ -48,38 +48,38 @@
             </ul>
             <ul class="social">
               <li class="social__item">
-                <a class="social__link" href="#" style="background-image: url('../images/icon/facebook.svg');">
+                <a class="social__link" href="#" target="_blank" style="background-image: url('../images/icon/facebook.svg');">
                   <span class="sr-only">Перейти в facebook</span>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#" style="background-image: url('../images/icon/youtube.svg');">
+                <a class="social__link" href="#" target="_blank" style="background-image: url('../images/icon/youtube.svg');">
                   <span class="sr-only">Перейти в youtube</span>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#" style="background-image: url('../images/icon/telegram.svg');">
+                <a class="social__link" href="#" target="_blank" style="background-image: url('../images/icon/telegram.svg');">
                   <span class="sr-only">Перейти в telegram</span>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#" style="background-image: url('../images/icon/instagram.svg');">
+                <a class="social__link" href="#" target="_blank" style="background-image: url('../images/icon/instagram.svg');">
                   <span class="sr-only">Перейти в instagram</span>
                 </a>
               </li>
             </ul>
-          </adress>
+          </div>
         </div>
         <div class="footer__bottom">
           <span class="footer__copy">© 2021 фрешок</span>
           <ul class="footer__carts">
-            <li class="footer__list">
-              <a class="footer__cart" href="#" style="background-image: url('../images/icon/visa.svg');">
+            <li class="footer__component">
+              <a class="footer__cart" href="#" target="_blank" style="background-image: url('../images/icon/visa.svg');">
                 <span class="sr-only">Visa</span>
               </a>
             </li>
-            <li class="footer__list">
-              <a class="footer__cart footer__cart--small" href="#" style="background-image: url('../images/icon/mc.svg');">
+            <li class="footer__component">
+              <a class="footer__cart footer__cart--small" href="#" target="_blank" style="background-image: url('../images/icon/mc.svg');">
                 <span class="sr-only">Mastercard</span>
               </a>
             </li>

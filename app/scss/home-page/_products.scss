@@ -1,15 +1,29 @@
-.product {
+.products {
   text-align: center;
   letter-spacing: 0.03em;
-}
 
-.product {
   &__items {
     text-align: left;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px;
     margin-bottom: 48px;
+
+    @include mq('desktop') {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include mq('tablet-2') {
+      grid-template-columns: 1fr 1fr;
+      max-width: 700px;
+      justify-content: center;
+      margin: 0 auto 48px;
+    }
+
+    @include mq('phone') {
+      gap: 5px;
+      margin-bottom: 27px;
+    }
   }
 
   &__item {
@@ -24,6 +38,10 @@
     position: relative;
     transition: border 0.4s;
 
+    @include mq('desktop') {
+      max-width: 100%;
+    }
+
     &:hover {
       border: 1px solid $green-900;
     }
@@ -32,13 +50,13 @@
 
 .badge {
 
-  &__list {
+  &__item {
     &:not(:last-child) {
       margin-bottom: 6px;
     }
   }
 
-  &__item {
+  &__name {
     width: 100%;
     padding: 3px 6px;
     border-radius: 6px;
@@ -58,39 +76,6 @@
 
     &--hit {
       background-color: $orange-900;
-    }
-  }
-}
-
-@media (max-width: 1200px) {
-  .product {
-    &__items {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    &__item {
-      max-width: 100%;
-    }
-  }
-}
-
-@media (max-width: 992px) {
-  .product {
-    &__items {
-      grid-template-columns: 1fr 1fr;
-      max-width: 700px;
-      justify-content: center;
-      margin: 0 auto 48px;
-    }
-  }
-
-}
-
-@media (max-width: 600px) {
-  .product {
-    &__items {
-      gap: 5px;
-      margin-bottom: 27px;
     }
   }
 }
