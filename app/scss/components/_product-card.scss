@@ -116,8 +116,13 @@
   &__image {
     object-fit: cover;
 
-    @include mq('phone') {
+    @include mq('desktop') {
+      max-width: 250px;
       object-fit: contain;
+    }
+
+    @include mq('phone') {
+       max-width: 100%;
     }
   }
 

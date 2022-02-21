@@ -38,10 +38,6 @@
     position: relative;
     transition: border 0.4s;
 
-    @include mq('desktop') {
-      max-width: 100%;
-    }
-
     &:hover {
       border: 1px solid $green-900;
     }

@@ -111,6 +111,7 @@
     }
 
     &__img {
+      width: 100%;
 
       @include mq('desktop') {
         width: 120px;
@@ -129,6 +130,12 @@
 
     &__image {
       object-fit: contain;
+      width: 220px;
+
+       @include mq('desktop'){
+         max-width: 100%;
+       }
     }
+
   }
 }
