@@ -52,6 +52,10 @@
       margin-bottom: 0;
       padding: 3px 0 0 40px;
       width: 100%;
+
+      @include mq('phone'){
+        padding-left: 18px;
+      }
     }
 
     &__title {
@@ -92,6 +96,10 @@
       &::before {
         display: none;
       }
+
+      @include mq('phone'){
+        height: 60px;
+      }
     }
 
     &__image {
@@ -121,7 +129,7 @@
 
     @include mq('phone') {
       align-self: flex-start;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
   }
 

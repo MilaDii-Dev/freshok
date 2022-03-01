@@ -125,91 +125,86 @@
                 </svg>
                 <span class="user-nav__num">12</span>
               </button>
-
-              <section class="cart">
-                <div class="cart__top">
-                  <div class="cart__inner">
-                    <h2 class="cart__title">Корзина</h2>
-                    <button class="cart__clean" type="reset">очистить корзину</button>
-                  </div>
-                  <button class="cart__btn" type="button">
-                    <svg class="cart__icon">
-                      <use xlink:href="images/sprite.svg#cross"></use>
-                    </svg>
-                    <span class="sr-only">Закрыть корзину</span>
-                  </button>
-                </div>
-                <ul class="cart__list">
-                  <li class="cart__item">
-                    <article class="product-card">
-                      <div class="cart__box">
-                        <a class="product-card__img" href="#">
-                          <img class="product-card__image" src="images/product-card/ananas.jpg" alt="Ананас" width="81" height="61">
-                        </a>
-                        <a class="product-card__link" href="#">
-                          <h3 class="product-card__title">Ананас, 1кг</h3>
-                          <span class="product-card__price">999<span>₽</span></span>
-                        </a>
-                      </div>
-                      <div class="cart__wrap">
-                        <div class="product-card__counters">
-                          <input class="product-card__counter product-card__counter--number" type="number" step="1" value="1" min="1" max="99" name="number" data-counter>
-                        </div>
-                        <div class="product-card__bottom">
-                          <span class="product-card__price">1998<span>₽</span></span>
-                        </div>
-                      </div>
-                      <button class="cart-top__btn cart__btn--small" type="button">
-                        <svg class="cart__icon cart__icon--small">
-                          <use xlink:href="images/sprite.svg#cross"></use>
-                        </svg>
-                        <span class="sr-only">Удалить товар</span>
-                      </button>
-                    </article>
-                  </li>
-                  <li class="cart__item">
-                    <article class="product-card">
-                      <div class="cart__box">
-                        <a class="product-card__img" href="#">
-                          <img class="product-card__image" src="images/product-card/dragon.jpg" alt="Питахайя красная с белой мякотью" width="81" height="61">
-                        </a>
-                        <a class="product-card__link" href="#">
-                          <h3 class="product-card__title">Питахайя красная с белой мякотью, 1шт</h3>
-                          <span class="product-card__price">1019<span>₽</span></span>
-                        </a>
-                      </div>
-                      <div class="cart__wrap">
-                        <div class="product-card__counters">
-                          <input class="product-card__counter product-card__counter--number" type="number" step="1" value="1" min="1" max="99" name="number" data-counter>
-                        </div>
-                        <div class="product-card__bottom">
-                          <span class="product-card__price">2038<span>₽</span></span>
-                        </div>
-                      </div>
-                      <button class="cart-top__btn cart__btn--small" type="button">
-                        <svg class="cart__icon cart__icon--small">
-                          <use xlink:href="images/sprite.svg#cross"></use>
-                        </svg>
-                        <span class="sr-only">Удалить товар</span>
-                      </button>
-                    </article>
-                  </li>
-                </ul>
-                <div class="cart__summation">
-                  <span class="cart__title cart__title--bottom">Товаров на сумму</span>
-                  <span class="cart-price cart__amount">2038<span>₽</span></span>
-                </div>
-                <a class="link cart__order" href="#">Оформить заказ</a>
-              </section>
             </div>
           </div>
         </div>
       </nav>
-      <form class="form-search form__mobile" action="#">
-        <label class="form-search__label" for="search-mobile"></label>
-        <input class="form-search__field" type="text" placeholder="Я ищу..." name="search-mobile" id="search-mobile" required>
-        <button class="button button--form" type="submit">поиск</button>
-      </form>
+
+      <section class="cart">
+        <div class="cart__top">
+          <div class="cart__inner">
+            <h2 class="cart__title">Корзина</h2>
+            <button class="cart__clean" type="reset">очистить корзину</button>
+          </div>
+          <button class="cart__btn" type="button">
+            <svg class="cart__icon">
+              <use xlink:href="images/sprite.svg#cross"></use>
+            </svg>
+            <span class="sr-only">Закрыть корзину</span>
+          </button>
+        </div>
+        <ul class="cart__list">
+          <li class="cart__item">
+            <article class="product-card">
+              <div class="cart__box">
+                <a class="product-card__img" href="#">
+                  <img class="product-card__image" src="images/product-card/ananas.jpg" alt="Ананас" width="81" height="61">
+                </a>
+                <a class="product-card__link" href="#">
+                  <h3 class="product-card__title">Ананас, 1кг</h3>
+                  <span class="product-card__price">999<span>₽</span></span>
+                </a>
+              </div>
+              <div class="cart__wrap">
+                <div class="product-card__counters">
+                  <input class="product-card__counter product-card__counter--number" type="number" step="1" value="1" min="1" max="99" name="number" data-counter>
+                </div>
+                <div class="product-card__bottom">
+                  <span class="product-card__price">1998<span>₽</span></span>
+                </div>
+              </div>
+              <button class="cart-top__btn cart__btn--small" type="button">
+                <svg class="cart__icon cart__icon--small">
+                  <use xlink:href="images/sprite.svg#cross"></use>
+                </svg>
+                <span class="sr-only">Удалить товар</span>
+              </button>
+            </article>
+          </li>
+          <li class="cart__item">
+            <article class="product-card">
+              <div class="cart__box">
+                <a class="product-card__img" href="#">
+                  <img class="product-card__image" src="images/product-card/dragon.jpg" alt="Питахайя красная с белой мякотью" width="81" height="61">
+                </a>
+                <a class="product-card__link" href="#">
+                  <h3 class="product-card__title">Питахайя красная с белой мякотью, 1шт</h3>
+                  <span class="product-card__price">1019<span>₽</span></span>
+                </a>
+              </div>
+              <div class="cart__wrap">
+                <div class="product-card__counters">
+                  <input class="product-card__counter product-card__counter--number" type="number" step="1" value="1" min="1" max="99" name="number" data-counter>
+                </div>
+                <div class="product-card__bottom">
+                  <span class="product-card__price">2038<span>₽</span></span>
+                </div>
+              </div>
+              <button class="cart-top__btn cart__btn--small" type="button">
+                <svg class="cart__icon cart__icon--small">
+                  <use xlink:href="images/sprite.svg#cross"></use>
+                </svg>
+                <span class="sr-only">Удалить товар</span>
+              </button>
+            </article>
+          </li>
+        </ul>
+        <div class="cart__summation">
+          <span class="cart__title cart__title--bottom">Товаров на сумму</span>
+          <span class="cart-price cart__amount">2038<span>₽</span></span>
+        </div>
+        <a class="link cart__order" href="#">Оформить заказ</a>
+      </section>
 
       <div class="header-mobile">
         <div class="header-mobile__top">
@@ -257,84 +252,13 @@
               </button>
             </li>
           </ul>
-          <section class="cart">
-            <div class="cart__top">
-              <div class="cart__inner">
-                <h2 class="cart__title">Корзина</h2>
-                <button class="cart__clean" type="reset">очистить корзину</button>
-              </div>
-              <button class="cart__btn" type="button">
-                <svg class="cart__icon">
-                  <use xlink:href="images/sprite.svg#cross"></use>
-                </svg>
-                <span class="sr-only">Закрыть корзину</span>
-              </button>
-            </div>
-            <ul class="cart__list">
-              <li class="cart__item">
-
-                <article class="product-card">
-                  <div class="cart__box">
-                    <a class="product-card__img" href="#">
-                      <img class="product-card__image" src="images/product-card/ananas.jpg" alt="Ананас" width="81" height="61">
-                    </a>
-                    <a class="product-card__link" href="#">
-                      <h3 class="product-card__title">Ананас, 1кг</h3>
-                      <span class="product-card__price">999<span>₽</span></span>
-                    </a>
-                  </div>
-                  <div class="cart__wrap">
-                    <div class="product-card__counters">
-                      <input class="product-card__counter product-card__counter--number" type="number" step="1" value="1" min="1" max="99" name="number" data-counter>
-                    </div>
-                    <div class="product-card__bottom">
-                      <span class="product-card__price">1998<span>₽</span></span>
-                    </div>
-                  </div>
-                  <button class="cart-top__btn cart__btn--small" type="button">
-                    <svg class="cart__icon cart__icon--small">
-                      <use xlink:href="images/sprite.svg#cross"></use>
-                    </svg>
-                    <span class="sr-only">Удалить товар</span>
-                  </button>
-                </article>
-              </li>
-              <li class="cart__item">
-                <article class="product-card">
-                  <div class="cart__box">
-                    <a class="product-card__img" href="#">
-                      <img class="product-card__image" src="images/product-card/dragon.jpg" alt="Питахайя красная с белой мякотью" width="81" height="61">
-                    </a>
-                    <a class="product-card__link" href="#">
-                      <h3 class="product-card__title">Питахайя красная с белой мякотью, 1шт</h3>
-                      <span class="product-card__price">1019<span>₽</span></span>
-                    </a>
-                  </div>
-                  <div class="cart__wrap">
-                    <div class="product-card__counters">
-                      <input class="product-card__counter product-card__counter--number" type="number" step="1" value="1" min="1" max="99" name="number" data-counter>
-                    </div>
-                    <div class="product-card__bottom">
-                      <span class="product-card__price">2038<span>₽</span></span>
-                    </div>
-                  </div>
-                  <button class="cart-top__btn cart__btn--small" type="button">
-                    <svg class="cart__icon cart__icon--small">
-                      <use xlink:href="images/sprite.svg#cross"></use>
-                    </svg>
-                    <span class="sr-only">Удалить товар</span>
-                  </button>
-                </article>
-              </li>
-            </ul>
-            <div class="cart__summation">
-              <span class="cart__title cart__title--bottom">Товаров на сумму</span>
-              <span class="cart-price cart__amount">2038<span>₽</span></span>
-            </div>
-            <a class="link cart__order" href="#">Оформить заказ</a>
-          </section>
+          <form class="form-search form__mobile" action="#">
+            <label class="form-search__label" for="search-mobile"></label>
+            <input class="form-search__field" type="text" placeholder="Я ищу..." name="search-mobile" id="search-mobile" required>
+            <button class="button button--form" type="submit">поиск</button>
+          </form>
         </div>
-        <aside class="mobile-nav">
+        <div class="mobile-nav">
           <div class="mobile-nav__top">
             <a class="logo" href="#">
               <img class="logo__img" src="images/logo-menu.svg" alt="логотип" width="200" height="60">
@@ -452,14 +376,14 @@
               <a class="menu__link" href="#">Публичная оферта</a>
             </li>
           </ul>
-        </aside>
+        </div>
       </div>
     </header>
     <main class="main">
             <section class="main-slider">
         <ul class="main-slider__items">
           <li class="main-slider__item">
-            <div class="main-slider__inner" style="background-image: url('images/bg/1.jpg');">>
+            <div class="main-slider__inner" style="background-image: url('images/bg/1.jpg');">
               <div class="main-slider__content">
                 <h3 class="main-slider__title">свежачок вам в хату
                   <span class="main-slider__span">
@@ -469,7 +393,7 @@
                 <div class="main-slider__text">
                   <p> Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!</p>
                 </div>
-                <a class="link main-slider__link" href="#">Купить сейчас</a>
+                <a class="link link--slider" href="#">Купить сейчас</a>
               </div>
             </div>
           </li>
@@ -484,7 +408,7 @@
                 <div class="main-slider__text">
                   <p> Только с 12 по 15 июля скидка на домашние помидорчики</p>
                 </div>
-                <a class="link main-slider__link" href="#">Купить сейчас</a>
+                <a class="link link--slider" href="#">Купить сейчас</a>
               </div>
             </div>
           </li>
@@ -496,7 +420,7 @@
                     Распродажа зелени
                   </span>
                 </h3>
-                <a class="link main-slider__link" href="#">Купить сейчас</a>
+                <a class="link link--slider" href="#">Купить сейчас</a>
               </div>
             </div>
           </li>
@@ -1196,7 +1120,7 @@
         <article class="news-card">
           <time class="news-card__date" datetime="07-15">июль<span class="news-card__num">15</span></time>
           <a class="news-card__box" href="#">
-            <img class="news-card__img" src="images/news/strawberry.jpg" alt="клубника">
+            <img class="news-card__img" src="images/news/strawberry.jpg" alt="клубника" width="410" heigth="300">
             <h3 class="news-card__text">
               Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не разобрали!
             </h3>
@@ -1207,7 +1131,7 @@
         <article class="news-card">
           <time class="news-card__date" datetime="05-07">май<span class="news-card__num">07</span></time>
           <a class="news-card__box" href="#">
-            <img class="news-card__img" src="images/news/mango.jpg" alt="манго">
+            <img class="news-card__img" src="images/news/mango.jpg" alt="манго" width="410" heigth="300">
             <h3 class="news-card__text">
               Шикарнейший выбор манго в нашем онлайн-маркете
             </h3>
@@ -1218,7 +1142,7 @@
         <article class="news-card-card">
           <time class="news-card__date" datetime="02-20">февраль<span class="news-card__num">20</span></time>
           <a class="news-card__box" href="#">
-            <img class="news-card__img" src="images/news/papaya.jpg" alt="папая">
+            <img class="news-card__img" src="images/news/papaya.jpg" alt="папая" width="410" heigth="300">
             <h3 class="news-card__text">
               Всё, что вы хотели знать о папайя
             </h3>

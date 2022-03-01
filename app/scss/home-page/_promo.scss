@@ -113,12 +113,7 @@
     &__img {
       width: 100%;
 
-      @include mq('desktop') {
-        width: 120px;
-      }
-
       @include mq('phone') {
-        width: 200px;
         height: 100px;
       }
 

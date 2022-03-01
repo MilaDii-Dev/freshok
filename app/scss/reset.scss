@@ -50,13 +50,13 @@ button {
 }
 
 button {
-  border: none;
   cursor: pointer;
   background-color: transparent;
   appearance: auto;
 }
 
-input{
+input,
+button {
   border: none;
 }
 

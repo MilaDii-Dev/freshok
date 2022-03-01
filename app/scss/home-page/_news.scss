@@ -2,7 +2,15 @@
   padding-bottom: 72px;
 
   @include mq('phone') {
-    padding-bottom: 26px;
+    padding-bottom: 44px;
+  }
+
+  .title {
+    margin-bottom: 12px;
+  }
+
+  .container {
+    padding: 0 10px;
   }
 
   &__top {
@@ -11,7 +19,7 @@
     align-items: center;
 
     @include mq('phone') {
-      margin-bottom: 24px;
+      margin-bottom: 27px;
       display: block;
       flex-direction: column;
       justify-content: start;
@@ -62,19 +70,26 @@
     box-shadow: 0 3px 3px rgba($black, 0.25);
     border-radius: 6px;
     min-height: 348px;
+    margin-bottom: 15px;
 
     @include mq('tablet-2') {
       max-width: 90%;
-      margin: 10px;
+      margin-bottom: 0;
     }
 
     @include mq('phone') {
+      max-width: 100%;
       min-height: 100%;
-      margin: 0 0 15px 0;
     }
 
     &:not(:last-child) {
       margin-right: 15px;
+      margin-bottom: 15px;
+
+      @include mq('tablet-2') {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
     }
   }
 }
@@ -108,7 +123,12 @@
     object-fit: cover;
     height: 240px;
     width: 100%;
+    max-width: 410px;
     border-radius: 6px 6px 0 0;
+
+    @include mq('tablet-2') {
+      max-width: 100%;
+    }
 
     @include mq('phone') {
       height: 200px;
@@ -125,15 +145,16 @@
 
     @include mq('phone') {
       font-size: 14px;
-      padding: 13px 0px 16px 9px;
+      padding: 13px 0px 0 9px;
     }
   }
 
   &__box {
     display: block;
+    padding-bottom: 16px;
 
     &:hover {
-      .news {
+      .news-card {
         &__text {
           color: $green-900;
         }

@@ -9,6 +9,11 @@
     text-align: center;
   }
 
+  @include mq('phone') {
+    padding-top: 25px;
+    padding-bottom: 8px;
+  }
+
   &::after {
     @include pseudo;
     width: 100%;
@@ -48,7 +53,7 @@
 
     @include mq('desktop') {
       margin: 0 auto;
-      padding: 24px 0 24px 30px;
+      padding: 28px 0 24px 30px;
       position: relative;
     }
 
@@ -79,7 +84,7 @@
     }
 
     @include mq('phone') {
-      padding-left: 50px;
+      padding-left: 33px;
       column-count: 2;
     }
   }
