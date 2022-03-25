@@ -11,6 +11,8 @@
 
     @include mq('desktop') {
       grid-template-columns: 1fr 1fr 1fr;
+      max-width: 1000px;
+      margin: 0 auto 48px;
     }
 
     @include mq('tablet-2') {
@@ -45,6 +47,7 @@
 }
 
 .badge {
+  z-index: 35;
 
   &__item {
     &:not(:last-child) {

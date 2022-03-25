@@ -1,0 +1,32 @@
+.breabcrumbs {
+  padding: 24px 0;
+  background-color: $silver-100;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 16px;
+      position: relative;
+
+      &::after {
+        @include pseudo;
+        background-image: url('../images/chevron.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 36px;
+        height: 10px;
+        top: 3px;
+        right: -41px;
+      }
+    }
+  }
+
+  &__link {
+    color: $dark-500;
+    line-height: 1.2;
+  }
+}

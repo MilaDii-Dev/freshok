@@ -1,0 +1,171 @@
+.shop-filter {
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-height: 47px;
+  height: 100%;
+
+  @include mq('tablet-2') {
+    justify-content: start;
+  }
+
+  &__buttons {
+    display: flex;
+
+    @include mq('tablet-2') {
+      order: -1;
+    }
+  }
+
+  &__item {
+    @include mq('tablet-2') {
+      display: none;
+    }
+
+    &--open {
+      display: none;
+
+      .shop-filter {
+        &__icon {
+          fill: $green-900;
+        }
+      }
+
+      @include mq('tablet-2') {
+        display: block;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__btn {
+    padding: 6px;
+    background-color: $silver-100;
+    width: 47px;
+    height: 47px;
+    border-radius: 3px;
+
+    &--active {
+      .shop-filter {
+        &__icon {
+          fill: $green-900;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    fill: $silver-600;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__selects {
+    margin-right: 15px;
+    z-index: 40;
+
+    @include mq('tablet-2') {
+      margin-right: 0;
+    }
+  }
+
+  &__sorting {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    .jq-selectbox {
+      &__select {
+        height: 47px;
+        width: 100%;
+        padding: 15px 45px 15px 15px;
+        border: 1px solid $silver-600;
+        border-radius: 3px;
+        background-color: $white;
+        color: $dark-700;
+        text-shadow: none;
+        box-shadow: none;
+        font-family: $opensans;
+        line-height: 1.2;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+        transition: box-shadow 0.4s, border 0.4s;
+
+        &:focus {
+          box-shadow: 0 0 0 3px $green-200;
+        }
+
+        @include mq('tablet') {
+          font-size: 12px;
+          padding: 15px 20px 15px 6px;
+        }
+      }
+
+      &__select-text {
+        @include line-clamp(1);
+        width: 100%;
+      }
+
+      &__trigger {
+        border-left: none;
+
+        &-arrow {
+          background-image: url('../images/select-arrow.svg');
+          background-repeat: no-repeat;
+          background-size: contain;
+          border: none;
+          width: 10px;
+          height: 13px;
+          z-index: 35;
+          top: 20px;
+          position: absolute;
+          right: 15px;
+          transition: transform 0.4s;
+
+          @include mq('tablet') {
+            right: 10px;
+          }
+        }
+      }
+
+      &__dropdown {
+        z-index: 50;
+        margin: 0;
+        border: 1px solid $silver-600;
+        background-color: $white;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        border-radius: 0 0 6px 6px;
+      }
+    }
+
+    .shop-filter {
+      &__option {
+        padding: 8px;
+      }
+    }
+  }
+}
+
+.jq-selectbox.opened {
+  .jq-selectbox {
+
+    &__trigger-arrow {
+      transform: rotate(180deg);
+      top: 11px;
+    }
+
+    &__select {
+      border: 1px solid $dark-500;
+      border-radius: 3px 3px 0 0;
+    }
+  }
+}

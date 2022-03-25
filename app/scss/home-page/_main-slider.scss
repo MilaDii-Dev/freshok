@@ -139,10 +139,6 @@
       border-radius: 6px;
       fill: $dark-500;
       transition: fill 0.3s;
-
-      &:disabled {
-        fill: $silver-600;
-      }
     }
 
     &--prev {
@@ -151,6 +147,30 @@
 
     &--next {
       right: 45px;
+    }
+
+
+  }
+
+  .slick-disabled {
+    cursor: default;
+    .arrow {
+      &__image {
+        fill: $silver-600;
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: rgba($white, 0.8);
+      box-shadow: none;
+
+      .arrow {
+        &__image {
+          fill: $silver-600;
+        }
+      }
     }
   }
 
