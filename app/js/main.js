@@ -171,11 +171,11 @@ $(function () {
   });
 
   $('.shop-filter__btn--list').on('click', function () {
-    $('.shop__cards').addClass('shop__cards--list');
+    $('.shop-cards').addClass('shop-cards--list');
   });
 
   $('.shop-filter__btn--grid').on('click', function () {
-    $('.shop__cards').removeClass('shop__cards--list');
+    $('.shop-cards').removeClass('shop-cards--list');
   });
 
   $('.user-nav__btn').on('click', function () {

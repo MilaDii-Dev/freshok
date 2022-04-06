@@ -17,9 +17,11 @@
         background-image: url('../images/chevron.svg');
         background-repeat: no-repeat;
         background-size: contain;
+        background-position: left center;
         width: 36px;
         height: 10px;
-        top: 3px;
+        top: 50%;
+        transform: translateY(-50%);
         right: -41px;
       }
     }

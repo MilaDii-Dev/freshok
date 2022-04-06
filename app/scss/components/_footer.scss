@@ -53,8 +53,9 @@
 
     @include mq('desktop') {
       margin: 0 auto;
-      padding: 28px 0 24px 30px;
+      padding: 28px 0 24px 0;
       position: relative;
+      max-width: 450px;
     }
 
     &::before,
@@ -84,8 +85,8 @@
     }
 
     @include mq('phone') {
-      padding-left: 33px;
       column-count: 2;
+      max-width: 350px;
     }
   }
 

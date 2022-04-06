@@ -17,8 +17,22 @@
     @@include('components/_header.html')
     <main class="main">
       @@include('components/_breadcrumbs.html')
-      @@include('catalog/_shop.html')
-      <!-- @@include('components/_filters.html') -->
+      <section class="shop">
+        <div class="container">
+          <h1 class="shop__title">Каталог товаров</h1>
+          <div class="shop__inner">
+            @@include('components/_filters.html')
+            <div class="shop__content">
+              @@include('components/_shop-filter.html')
+              @@include('catalog/_shop-cards.html')
+              <div class="shop__bottom">
+                <a class="link link--active" href="#">Показать еще</a>
+                @@include('components/_pagination.html')
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       @@include('components/_advantages.html')
     </main>
     @@include('components/_footer.html')

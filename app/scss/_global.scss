@@ -72,7 +72,7 @@ body {
   padding: 11px 28px;
   background-color: $green-900;
   color: $white;
-  line-height: 1.3;
+  line-height: 1.4;
   border-radius: 6px;
   font-size: 18px;
   text-align: center;
@@ -103,32 +103,6 @@ body {
     &:focus {
       box-shadow: 0 0 0 4px $green-200;
       border-radius: 6px;
-    }
-
-    &:hover {
-      background-color: $green-1000;
-    }
-
-    &:active {
-      box-shadow: inset 0 4px 4px rgba($black, 0.25);
-      color: rgba($white, 0.5);
-    }
-  }
-
-  &--slider {
-    border-radius: 6px;
-    transition: background-color 0.3s, box-shadow 0.4s, color 0.3s;
-
-    @include mq('tablet-2') {
-      font-size: 16px;
-    }
-
-    @include mq('tablet') {
-      font-size: 14px;
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 4px $green-200;
     }
 
     &:hover {

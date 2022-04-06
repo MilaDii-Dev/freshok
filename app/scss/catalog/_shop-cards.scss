@@ -1,0 +1,171 @@
+.shop-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+  padding-bottom: 48px;
+
+  @include mq('desktop') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mq('tablet') {
+    padding-bottom: 24px;
+    gap: 10px;
+  }
+
+  @include mq('phone') {
+    gap: 3px;
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  .product-card {
+
+    @include mq('desktop') {
+      justify-content: start;
+    }
+
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 24px 6px 19px;
+
+      @include mq('phone') {
+        padding: 0 16px 6px 13px;
+      }
+    }
+
+    &__img {
+      @include mq('phone') {
+        height: 100px;
+      }
+    }
+  }
+
+  &--list {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    gap: 33px;
+
+    @include mq('desktop') {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include mq('tablet-2') {
+      display: none;
+    }
+
+    .shop-cards {
+      &__item {
+        max-width: 100%;
+        width: 100%;
+        padding: 10px 0 6px;
+      }
+    }
+
+    .product-card {
+      flex-direction: row;
+      padding-top: 0;
+
+      &__image {
+        height: 135px;
+        width: 200px;
+      }
+
+      &__img {
+        margin-bottom: 0;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+
+      &__btn {
+        &--favourite {
+          top: 56px;
+          right: 5px;
+        }
+      }
+
+      &__bottom {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      &__img {
+        justify-content: start;
+      }
+
+      &__bottom,
+      &__title {
+        padding: 0 22px 0 0;
+      }
+
+      &__title {
+        max-width: 178px;
+        width: 100%;
+
+        @include mq('desktop') {
+          max-width: 100%;
+        }
+      }
+
+      &__top {
+        padding: 4px 22px 13px 0;
+      }
+
+      &__wrap {
+        @include mq('desktop') {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  &__item {
+    padding: 15px 0 9px;
+    max-width: 300px;
+    width: 100%;
+    border: 1px solid rgba($dark-1000, 0.2);
+    border-radius: 6px;
+
+    @include mq('desktop') {
+      max-width: 100%;
+    }
+  }
+
+  .product-card {
+
+    &__bottom {
+      padding-bottom: 0;
+
+      @include mq('phone') {
+        padding-top: 45px;
+
+      }
+    }
+
+    &__title {
+      padding-right: 22px;
+      height: 60px;
+    }
+
+    &__rating {
+      padding-right: 11px;
+    }
+
+    &__image {
+      object-fit: contain;
+
+      @include mq('phone') {
+        max-width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__btn {
+      z-index: 5;
+    }
+  }
+}

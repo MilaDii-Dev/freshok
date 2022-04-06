@@ -1,0 +1,43 @@
+        <h2 class="sr-only">Сортировка</h2>
+        <div class="shop-filter">
+          <div class="shop-filter__selects">
+            <select class="shop-filter__sorting">
+              <option class="shop-filter__option">По названию</option>
+              <option class="shop-filter__option">По популярности</option>
+              <option class="shop-filter__option">Сначала дешевые</option>
+              <option class="shop-filter__option">Сначала дорогие</option>
+              <option class="shop-filter__option">По алфавиту</option>
+            </select>
+            <select class="shop-filter__sorting">
+              <option class="shop-filter__option">по 12</option>
+              <option class="shop-filter__option">по 18</option>
+              <option class="shop-filter__option">по 24</option>
+              <option class="shop-filter__option">по 30</option>
+              <option class="shop-filter__option">по 36</option>
+            </select>
+          </div>
+          <ul class="shop-filter__buttons">
+            <li class="shop-filter__item shop-filter__item--open">
+              <button class="shop-filter__btn shop-filter__btn--open" type="button">
+                <span class="sr-only">Открыть фильтры</span>
+                <svg class="shop-filter__icon">
+                  <use xlink:href="images/sprite.svg#filter"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="shop-filter__item">
+              <button class="shop-filter__btn shop-filter__btn--list" type="button">
+                <svg class="shop-filter__icon">
+                  <use xlink:href="images/sprite.svg#button"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="shop-filter__item">
+              <button class="shop-filter__btn shop-filter__btn--grid shop-filter__btn--active" type="button">
+                <svg class="shop-filter__icon">
+                  <use xlink:href="images/sprite.svg#button-active"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>

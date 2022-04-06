@@ -1,10 +1,119 @@
-<section class="filters">
-  <div class="filters__item filters-categories">
-    <button class="filters__subtitle">
-      Категории
-    </button>
-    <form class="filters__form">
-      
-    </form>
-  </div>
-</section>
+      <section class="filters">
+        <h2 class="sr-only">Фильтры</h2>
+        <button class="cart__btn" type="button">
+          <svg class="cart__icon">
+            <use xlink:href="images/sprite.svg#cross"></use>
+          </svg>
+          <span class="sr-only">Закрыть корзину</span>
+        </button>
+
+        <div class="filters__component filters-categories">
+          <button class="filters__subtitle" type="button">
+            Категории
+            <span class="sr-only">Свернуть/развернуть список категорий</span>
+          </button>
+          <ul class="filters__list">
+            <li class="filters__item">
+              <a class="filters__link" href="#">Овощи и фрукты</a>
+            </li>
+            <li class="filters__item">
+              <a class="filters__link" href="#">Бакалея</a>
+            </li>
+            <li class="filters__item">
+              <a class="filters__link" href="#">Молочные продукты</a>
+            </li>
+            <li class="filters__item">
+              <a class="filters__link" href="#">Хлеб</a>
+            </li>
+            <li class="filters__item">
+              <a class="filters__link" href="#">Мясо</a>
+            </li>
+            <li class="filters__item">
+              <a class="filters__link" href="#">Колбаса</a>
+            </li>
+            <li class="filters__item">
+              <a class="filters__link" href="#">Рыба</a>
+            </li>
+            <li class="filters__item">
+              <a class="filters__link" href="#">Алкоголь</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="filters__component filters-offer">
+          <button class="filters__subtitle" type="button">
+            Предложения
+            <span class="sr-only">Свернуть/развернуть список предложений</span>
+          </button>
+          <ul class="filters__list">
+            <li class="filters__item">
+              <label class="filters__label" for="sale">Со скидкой</label>
+              <input class="filters__input" type="checkbox" id="sale">
+            </li>
+            <li class="filters__item">
+              <label class="filters__label" for="new">Новинка</label>
+              <input class="filters__input" type="checkbox" id="new" checked>
+            </li>
+            <li class="filters__item">
+              <label class="filters__label" for="hit">Хит</label>
+              <input class="filters__input" type="checkbox" id="hit">
+            </li>
+          </ul>
+        </div>
+
+        <div class="filters__component filters-brand">
+          <button class="filters__subtitle" type="button">
+            Бренд
+            <span class="sr-only">Свернуть/развернуть список брендов</span>
+          </button>
+          <ul class="filters__list">
+            <li class="filters__item">
+              <label class="filters__label" for="cola">CocaCola</label>
+              <input class="filters__input" type="checkbox" id="cola">
+            </li>
+            <li class="filters__item">
+              <label class="filters__label" for="pepsi">Pepsi</label>
+              <input class="filters__input" type="checkbox" id="pepsi">
+            </li>
+            <li class="filters__item">
+              <label class="filters__label" for="sprite">Sprite</label>
+              <input class="filters__input" type="checkbox" id="sprite">
+            </li>
+            <li class="filters__item">
+              <label class="filters__label" for="fanta">Fanta</label>
+              <input class="filters__input" type="checkbox" id="fanta">
+            </li>
+            <li class="filters__item">
+              <label class="filters__label" for="redbull">RedBull</label>
+              <input class="filters__input" type="checkbox" id="redbull">
+            </li>
+            <li class="filters__item">
+              <label class="filters__label" for="pepper">Dr Pepper</label>
+              <input class="filters__input" type="checkbox" id="pepper">
+            </li>
+          </ul>
+        </div>
+
+        <div class="filters__component filters-price">
+          <button class="filters__subtitle" type="button">
+            Цена
+            <span class="sr-only">Свернуть/развернуть фильтр цен</span>
+          </button>
+          <div class="filters-price__box">
+            <div class="filters-price__inner">
+              <div class="filters-price__item">
+                <label class="filters-price__text" for="from">от</label>
+                <input class="filters-price__input filters-price__input--from" type="number" placeholder="100" id="from">
+                <span>₽</span>
+              </div>
+              <div class="filters-price__item">
+                <label class="filters-price__text" for="to">до</label>
+                <input class="filters-price__input filters-price__input--to" type="number" placeholder="1000" id="to">
+                <span>₽</span>
+              </div>
+            </div>
+            <label class="filters__label" for="range"></label>
+            <input class="filters-price__range" type="text" name="my_range" data-min="0" data-max="1100" data-from="100" data-to="1000" id="range">
+          </div>
+        </div>
+      </section>

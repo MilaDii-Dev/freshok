@@ -10,6 +10,10 @@
     justify-content: start;
   }
 
+  @include mq('phone') {
+    margin-bottom: 28px;
+  }
+
   &__buttons {
     display: flex;
 
@@ -19,6 +23,8 @@
   }
 
   &__item {
+    margin-bottom: 5px;
+
     @include mq('tablet-2') {
       display: none;
     }
@@ -75,12 +81,15 @@
 
   &__sorting {
     display: inline-block;
+    margin-bottom: 5px;
+    max-width: 150px;
 
     &:not(:last-child) {
       margin-right: 15px;
     }
 
     .jq-selectbox {
+      @include line-clamp(1);
       &__select {
         height: 47px;
         width: 100%;
@@ -98,13 +107,17 @@
         cursor: pointer;
         transition: box-shadow 0.4s, border 0.4s;
 
-        &:focus {
+        &:hover {
           box-shadow: 0 0 0 3px $green-200;
         }
 
         @include mq('tablet') {
           font-size: 12px;
           padding: 15px 20px 15px 6px;
+        }
+
+        @include mq('phone') {
+          max-width: 110px;
         }
       }
 
@@ -150,6 +163,7 @@
     .shop-filter {
       &__option {
         padding: 8px;
+        @include line-clamp(1);
       }
     }
   }
