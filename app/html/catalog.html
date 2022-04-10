@@ -19,14 +19,14 @@
       @@include('components/_breadcrumbs.html')
       <section class="shop">
         <div class="container">
-          <h1 class="shop__title">Каталог товаров</h1>
+          <h2 class="shop__title">Каталог товаров</h2>
           <div class="shop__inner">
-            @@include('components/_filters.html')
+            @@include('catalog/_filters.html')
             <div class="shop__content">
-              @@include('components/_shop-filter.html')
+              @@include('catalog/_shop-filter.html')
               @@include('catalog/_shop-cards.html')
               <div class="shop__bottom">
-                <a class="link link--active" href="#">Показать еще</a>
+                <a class="link link--green" href="#">Показать еще</a>
                 @@include('components/_pagination.html')
               </div>
             </div>
