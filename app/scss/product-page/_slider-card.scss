@@ -1,0 +1,86 @@
+.slider-card {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 46px;
+
+  @include mq('phone') {
+    padding-bottom: 64px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: $ruda;
+    color: $black;
+    padding-bottom: 58px;
+
+    @include mq('phone') {
+      font-size: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+  &__inner {
+    text-align: center;
+  }
+
+  .shop-cards {
+    &__item {
+      text-align: left;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: -108px;
+    z-index: 50;
+    border: 1px solid $silver-600;
+    border-radius: 6px;
+
+    &__image {
+      width: 18px;
+      height: 32px;
+    }
+
+    &--prev {
+      right: 90px;
+    }
+
+    &--next {
+      right: 0;
+    }
+  }
+
+  .slick-slide {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  .slick-dots {
+    bottom: -30px;
+  }
+
+  .product-card {
+    &__btn {
+      &--favourite {
+        width: 24px;
+      }
+    }
+
+    &__status {
+      font-size: 8px;
+    }
+
+    &__rating {
+      font-size: 10px;
+
+      &::after {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}

@@ -36,6 +36,10 @@ body {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 15px;
+
+  &--small{
+    max-width: 710px;
+  }
 }
 
 .main {

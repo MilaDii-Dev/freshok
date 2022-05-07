@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.svg" type="image/x-icon">
+  <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+  <title>ФРЕШоК | Страница товара</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <h1 class="sr-only">ФРЕШоК | Страница товара</h1>
+  <div class="wrapper">
+    @@include('components/_header.html')
+    <main class="main">
+      <div class="breabcrumbs">
+        <div class="container">
+          <ul class="breabcrumbs__inner">
+            <li class="breabcrumbs__item">
+              <a class="breabcrumbs__link" href="#">
+                Главная
+              </a>
+            </li>
+            <li class="breabcrumbs__item">
+              <a class="breabcrumbs__link" href="#">
+                Каталог товаров
+              </a>
+            </li>
+            <li class="breabcrumbs__item">
+              <span class="breabcrumbs__link">
+                Питахайя красная с белой мякотью
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      @@include('product-page/_product.html')
+      @@include('product-page/_tab.html')
+      @@include('product-page/_slider-card.html')
+    </main>
+    @@include('components/_footer.html')
+  </div>
+
+  <script src="js/main.min.js"></script>
+
+</body>
+
+</html>

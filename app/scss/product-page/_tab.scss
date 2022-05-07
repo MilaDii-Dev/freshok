@@ -1,0 +1,315 @@
+.tab {
+  margin: 0 auto;
+  padding-bottom: 80px;
+
+  @include mq('tablet-2') {
+    padding-bottom: 50px;
+  }
+
+  @include mq('phone') {
+    padding-bottom: 43px;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 48px;
+    padding-top: 6px;
+
+    @include mq('phone') {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-right: 50px;
+
+      @include mq('phone') {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__link {
+    font-family: $ruda;
+    font-weight: $fw-600;
+    font-size: 18px;
+    text-transform: uppercase;
+    position: relative;
+    padding-top: 20px;
+    transition: color 0.4s;
+
+    @include mq('phone') {
+      font-size: 14px;
+    }
+
+    &--active {
+      color: $green-900;
+
+      &::before {
+        @include pseudo;
+        width: 100%;
+        height: 3px;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: $green-900;
+      }
+    }
+
+    &:hover {
+      color: $green-900;
+    }
+  }
+
+  &__item {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__text {
+    color: $silver-900;
+    font-size: 16px;
+    line-height: 1.6;
+
+    @include mq('phone') {
+      padding-bottom: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 28px;
+
+      @include mq('phone') {
+        margin-bottom: 37px;
+      }
+    }
+  }
+
+  &__description {
+    margin-bottom: 14px;
+    color: $dark-500;
+    font-size: 16px;
+    font-weight: $fw-700;
+
+    span {
+      font-weight: $fw-400;
+    }
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    font-weight: $fw-600;
+    margin-bottom: 46px;
+
+    @include mq('phone') {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__comments {
+    margin-bottom: 72px;
+
+    @include mq('tablet-2') {
+      margin-bottom: 35px;
+    }
+
+    @include mq('phone') {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__comment {
+    &:not(:first-child) {
+      padding-top: 24px;
+
+      @include mq('phone') {
+        margin-bottom: 28px;
+      }
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $silver-600;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    @include mq('phone') {
+      flex-wrap: wrap;
+      margin-bottom: 11px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    @include mq('phone') {
+      margin-bottom: 10px;
+    }
+
+    .jq-ry-container {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    margin-right: 24px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+  }
+
+  &__box {
+    min-width: 110px;
+  }
+
+  &__name {
+    font-weight: $fw-700;
+    margin-bottom: 5px;
+  }
+
+  &__date {
+    color: $silver-900;
+  }
+
+  &__review {
+    display: flex;
+    margin-bottom: 12px;
+  }
+
+  &__score {
+    font-size: 16px;
+    margin-right: 22px;
+  }
+
+  &__form {
+    margin-right: 20px;
+    max-width: 400px;
+    width: 100%;
+
+    @include mq('tablet') {
+      max-width: 100%;
+      margin-right: 0;
+    }
+
+    &:first-child {
+      @include mq('tablet') {
+        margin-bottom: 18px;
+      }
+    }
+  }
+
+  &__label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 9px;
+  }
+
+  &__input,
+  &__textarea {
+    min-height: 170px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+    padding: 18px;
+    transition: box-shadow 0.4s, border 0.4s;
+
+    &::placeholder {
+      color: $silver-600;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $green-200;
+      border-radius: 3px;
+      border: 1px solid $green-900;
+    }
+  }
+
+  &__textarea{
+    resize: none;
+  }
+
+  &__contain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    @include mq('tablet') {
+      flex-direction: column;
+    }
+  }
+
+  &__wrap {
+    max-width: 260px;
+    width: 100%;
+
+    @include mq('tablet') {
+      max-width: 100%;
+    }
+
+    .tab {
+      &__input {
+        min-height: 54px;
+      }
+
+      &__form {
+        margin-right: 0;
+
+        &:not(:last-child) {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+
+  &__checkbox {
+    max-width: 580px;
+    margin-bottom: 21px;
+    display: flex;
+
+
+    &-label {
+      color: $dark-500;
+      order: 2;
+      cursor: pointer;
+    }
+
+    &-input {
+      cursor: pointer;
+      width: 26px;
+      height: 22px;
+      display: block;
+      padding: 0;
+      padding: 10px;
+      margin-right: 12px;
+      border: 1px solid $silver-600;
+      border-radius: 3px;
+    }
+
+    .checked .jq-checkbox {
+      &__div {
+        display: block;
+        background-image: url('../images/check.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 10px;
+        height: 10px;
+        padding: 6px;
+        transform: none;
+        border: none;
+      }
+    }
+  }
+}
